@@ -1,0 +1,4 @@
+build
+.idea
+*.mo
+p3venv
