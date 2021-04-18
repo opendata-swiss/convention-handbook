@@ -1,0 +1,516 @@
+/*=======================================*/
+/* custom css for opendat.swiss.handbook */
+/*=======================================*/
+
+/*=======================================*/
+/* general presets                       */
+/*=======================================*/
+
+/* font family */
+
+body {
+   font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+}
+
+.rst-content .toctree-wrapper p.caption, h1, h2, h3, h4, h5, h6, legend {
+   font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+}
+
+/* link color */
+
+a, a:hover, a:visited, a:active, a:focus {
+    color: #009688;
+}
+
+/* background color */
+
+.wy-body-for-nav {
+    background: white;
+}
+
+/*=======================================*/
+/* Search Window with Logo                */
+/*=======================================*/
+
+/* the search window should have a white background */
+
+.wy-side-nav-search {
+   background: white;
+}
+
+/* Logo */
+
+.wy-side-nav-search .wy-dropdown>a img.logo, .wy-side-nav-search>a img.logo {
+    display: block;
+    margin: 0 auto;
+    height: 100px;
+    width: auto;
+    border-radius: 0;
+    max-width: 100%;
+    background: transparent;
+}
+
+/* top navbar appears on small screens */
+
+.wy-nav-top {
+    background: white;
+}
+
+/* menu icon on small screens */
+
+.wy-nav-top i {
+    color: #099;
+}
+
+/*=======================================*/
+/* Sidebar                               */
+/*=======================================*/
+
+/* sidebar should have a white background */
+
+.wy-nav-side {
+   background: white;
+}
+
+/* Sidebar search input */
+
+.wy-side-nav-search input[type=text] {
+    border-color:#009688
+}
+
+/* Headers of the content sections in the sidebar */
+
+.wy-menu-vertical p.caption {
+    color: #070707;
+    text-transform: none;
+    font-size: 18px;
+    padding-left: 26px;
+}
+
+/* color of links in the sidebar */
+
+.wy-menu-vertical li.current {
+    color: #009688;
+}
+
+.wy-menu-vertical a {
+    color: #009688;
+    padding-left: 26px;
+}
+
+.wy-menu-vertical a:hover,
+.wy-menu-vertical a:active,
+.wy-menu-vertical a:focus
+{
+    background: whitesmoke;
+    border-left: 6px solid #00A093;
+    padding-left:20px;
+    color: #009688;
+}
+
+.wy-menu-vertical li.toctree-l1.current>a {
+    padding-left:20px;
+    color:black;
+    border-bottom:none;
+    border-top:none;
+    font-weight: normal;
+    background: whitesmoke;
+}
+
+.wy-menu-vertical li.toctree-l1.current {
+    border-left: 6px solid #00A093;
+    background: whitesmoke;
+}
+
+.wy-menu-vertical li.toctree-l1 > a.custom-breadcrumb-upper {
+    color:#099;
+}
+
+.custom-breadcrumb-sub {
+    padding-left: 20px;
+    color: black;
+    font-weight: normal;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+/*=======================================*/
+/* Content page                          */
+/*=======================================*/
+
+/* don't show the content tree on the index page */
+
+.wy-nav-content .toctree-wrapper {
+   display: none;
+}
+
+/* header h1 at the top of the page */
+
+.rst-content h1 {
+    font-size: 18px;
+}
+
+/* header h2 at the top of the page */
+
+.rst-content h2 {
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+.rst-content h3 {
+    margin-top: 40px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+/*=======================================*/
+/* Breadcrumbs                           */
+/*=======================================*/
+
+.custom-breadcrumbs {
+    padding-bottom: 50px;
+}
+
+.custom-breadcrumbs ul {
+    display: inline;
+}
+
+.custom-breadcrumbs li {
+    display: inline;
+}
+
+.custom-breadcrumbs li p {
+    display: inline;
+}
+
+/*=======================================*/
+/* Container intro                       */
+/*=======================================*/
+
+div.container.intro {
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+div.container.intro p {
+    font-size: 18px;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+div.container.intro ul {
+    margin-bottom: 0
+}
+
+/*=======================================*/
+/* Container teaser                      */
+/*=======================================*/
+
+div.container.teaser {
+    background-size: 120px;
+    background-repeat: no-repeat;
+    height: 30px;
+    background-image: url("../../_static/images/branding/arrow-on-theme.png");
+    margin-bottom:10px;
+    margin-top:40px;
+}
+
+div.container.teaser p {
+    padding-top: 0;
+    padding-left: 125px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/*=======================================*/
+/* Container materialien                 */
+/*=======================================*/
+
+div.container.materialien {
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-image: url("../../_static/images/branding/category-identify.png");
+    height: 40px;
+    margin-bottom:10px;
+    margin-top:10px;
+}
+
+div.container.materialien p {
+    padding-top: 7px;
+    padding-left: 50px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+/*=======================================*/
+/* Container support                     */
+/*=======================================*/
+
+div.container.support {
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-image: url("../../_static/images/branding/category-support.png");
+    height: 40px;
+    margin-bottom:10px;
+}
+
+div.container.support p {
+    display:none;
+}
+
+/*=======================================*/
+/* Container important                   */
+/*=======================================*/
+
+div.container.important {
+    font-weight: bold;
+    background: white;
+}
+
+div.container.important p {
+    font-weight: bold;
+}
+
+/*=======================================*/
+/* Container construction                 */
+/*=======================================*/
+
+div.container.construction {
+    background: yellow;
+}
+
+div.container.construction p {
+}
+
+/*=======================================*/
+/* Container usageconditions            */
+/*=======================================*/
+
+div.container.usageconditions {
+    padding:2px 10px;
+    margin-bottom:10px;
+}
+
+div.container.usageconditions p {
+    font-weight: bold;
+    margin-bottom:0;
+}
+
+div.container.usageconditions div.figure {
+    margin-bottom:0;
+}
+
+div.container.usageconditions ul li {
+    list-style: none;
+}
+
+div.container.usageconditions ul li p {
+    font-weight: normal;
+}
+
+/*=======================================*/
+/* Container content-divider             */
+/*=======================================*/
+
+div.container.content-divider {
+    background-size: 40px;
+    height: 40px;
+    margin-bottom:10px;
+}
+
+div.container.content-divider p {
+    display:none;
+}
+
+/*=======================================*/
+/* Container jumpbox                     */
+/*=======================================*/
+
+.ogdch-jumpbox {
+    padding-bottom:40px;
+}
+
+/*=======================================*/
+/* field lists                           */
+/*=======================================*/
+
+.rst-content dl:not(.docutils) dt {
+    border-top:none;
+    color: inherit;
+    background: inherit;
+    font-size:16px;
+}
+
+.rst-content dl:not(.docutils) dt a {
+    font-size:16px;
+}
+
+/*=======================================*/
+/* Container attribute                   */
+/*=======================================*/
+
+div.container.attribute > p {
+    color: #099;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+div.container.attribute {
+    background:whitesmoke;
+    border-top:1px dashed #099;
+}
+
+.rst-content .section div.container.attribute li p {
+    margin-bottom: 0!important;
+}
+
+/*=======================================*/
+/* Container instruction                 */
+/*=======================================*/
+
+div.container.instructions p {
+    font-style: italic;
+    font-size: 85%;
+    line-height: 1;
+    padding: 0;
+    text-align: left;
+}
+
+/*=======================================*/
+/* admonition box                        */
+/*=======================================*/
+
+.rst-content .konvention .admonition-title
+{
+    background: lightcyan;
+}
+
+.rst-content .general .admonition-title
+{
+    background: grey;
+}
+
+.rst-content .convention-outdated .admonition-title
+{
+    background: darkgrey;
+}
+
+.rst-content .konvention .admonition-title
+{
+    background: #099;
+}
+
+.rst-content .konvention .admonition-title a
+{
+    color: white;
+}
+
+.rst-content .convention-valid .admonition-title
+{
+    background: #099;
+}
+
+.rst-content .admonition
+{
+    background: white;
+    margin-top:50px;
+}
+
+#konventionen .valid a {
+    background: #099;
+}
+
+#konventionen .outdated a {
+    color:gray;
+}
+
+#konventionen .new a {
+    color:red;
+}
+
+#term-general, #term-geo, #term-dcat {
+    display:none;
+}
+
+/*=======================================*/
+/* Footer                                */
+/*=======================================*/
+
+footer {
+    font-size: .8em;
+}
+
+#ogdch-footer
+{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 77px;
+}
+
+#ogdch-footer .logo-footer {
+    padding:20px;
+    height: 100px;
+}
+
+#ogdch-footer .ogdch-logo {
+    height: 20px;
+}
+
+.copyright p {
+    font-size: 12.8px;
+}
+
+/*=======================================*/
+/* Header                                */
+/*=======================================*/
+
+#ogdch-header {
+    height: 50px;
+    text-align: right;
+}
+
+#ogdch-header .ogdch-logo {
+    float:right;
+    height: 25px;
+}
+
+footer {
+    padding-top: 40px;
+}
+
+/*=======================================*/
+/* Language Switcher                     */
+/*=======================================*/
+
+#language-switcher {
+    display: block;
+    margin-bottom:20px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+#language-switcher a.active {
+  color: #070707;
+}
+
+#language-switcher a {
+  padding: 5px;
+}
+
+.language-divider {
+  border-left: 1px solid #070707;;
+}
+
+/*=======================================*/
+/* External Links                        */
+/*=======================================*/
+
+.rst-content.style-external-links a.reference.external::after {
+    font-family: FontAwesome;
+    content: "";
+    color: #099;
+    vertical-align: middle;
+    font-size: 60%;
+    margin-left: 0 2px;
+    padding: 0;
+}

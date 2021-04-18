@@ -1,0 +1,67 @@
+<footer>
+
+  <hr class="footer-divider"/>
+{%- block extrafooter %}
+<div id="ogdch-footer">
+    <p class="footer-text">
+	    {{ _('Sie haben Fragen?') }}
+        <a href="mailto:opendata(at)bfs.admin.ch">{{ _('Schreiben Sie uns.') }}</a>
+    </p>
+    <div class="footer-logos">
+        {% set bundes_logo = 'bundeslogo.svg' %}
+        {% set tf_de_logo = 'logo-tf-egovernment.png' %}
+        <img class="bundeslogo logo-footer" src="{{ pathto('_images/' + bundes_logo, 1) }}" alt="bundeslogo"/>
+        <img class="logo-tf logo-footer" src="{{ pathto('_images/' + tf_de_logo, 1) }}" alt="logo themenführer e-government"/>
+    </div>
+</div>
+{% endblock %}
+  <div class="copyright" role="contentinfo">
+    <p>
+    {%- if show_copyright %}
+      {%- if hasdoc('copyright') %}
+        {% set path = pathto('copyright') %}
+        {% set copyright = copyright|e %}
+        &copy; <a href="{{ path }}">{% trans %}Copyright{% endtrans %}</a> {{ copyright }}
+      {%- else %}
+        {% set copyright = copyright|e %}
+        &copy; {% trans %}Copyright{% endtrans %} {{ copyright }}
+      {%- endif %}
+    {%- endif %}
+
+    {%- if build_id and build_url %}
+      <span class="build">
+        {# Translators: Build is a noun, not a verb #}
+        {% trans %}Build{% endtrans %}
+        <a href="{{ build_url }}">{{ build_id }}</a>.
+      </span>
+    {%- elif commit %}
+      <span class="commit">
+        {# Translators: the phrase "revision" comes from Git, referring to a commit #}
+        {% trans %}Revision{% endtrans %} <code>{{ commit }}</code>.
+      </span>
+    {%- elif last_updated %}
+      <span class="lastupdated">
+        {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
+      </span>
+    {%- endif %}
+
+    </p>
+  </div>
+
+
+
+  {%- if show_sphinx %}
+    {% set sphinx_web = '<a href="http://sphinx-doc.org/">Sphinx</a>' %}
+    {% set readthedocs_web = '<a href="https://readthedocs.org">Read the Docs</a>'  %}
+    {# Translators: the variable "sphinx_web" is a link to the Sphinx project documentation with the text "Sphinx" #}
+    {% trans sphinx_web=sphinx_web, readthedocs_web=readthedocs_web %}Built with {{ sphinx_web }} using a{% endtrans %}
+    {# Translators: "theme" refers to a theme for Sphinx, which alters the appearance of the generated documenation #}
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">{% trans %}theme{% endtrans %}</a>
+    {# Translators: this is always used as "provided by Read the Docs", and should not imply Read the Docs is an author of the generated documentation. #}
+    {% trans %}provided by {{ readthedocs_web }}{% endtrans %}.
+  {%- endif %}
+
+
+
+</footer>
+
