@@ -5,29 +5,60 @@
 
 .. container:: custom-breadcrumbs
 
-   - :fa:`home` Handbuch
+   - :fa:`home` Konventionen-Handbuch
 
 ***************************************
-Konventions Handbuch für den DCAT-AP-CH
+Konventionen Handbuch
 ***************************************
 
-Dieses Handbuch ergänzt das Handbuch von opendata.swiss und den DCAT-AP-CH.
+Dieses Konvetions-Handbuch ergänzt das Handbuch von opendata.swiss
+zu Fragen, die das Schweizer DCAT Anwednungsprofil DCAT-AP-CH betreffen.
 
-Datenstandards ändern sich langsam. Es braucht Abstimmung in vielen Gremien um einen Datenstandard wie den
-DCAT-AP-CH zu ändern.
 
-Konventionen dagegen lassen sich flexibler anpassen.
+Warum braucht es ein Konventionen Handbuch?
+----------------------------------------------
+Datenstandards ändern sich nur langsam und benötigen viele Abstimmungen.
+Die Anwendung von Datenstandards hingegen orientiert sich an den praktischen Bedürfnissen
+der Datennutzer und Datenpublizierenden. Ziel ist es auf solche Bedürfnisse
+in Zukunft schneller reagieren zu können. Ein solches Bedürfnis ist etwa
+die Kompatibilität mit dem europäischen DCAT Anwendungsprofil DCAT-AP.
 
-Die in diesem Handbuch festgelegten Konventionen haben folgende Ziele:
+Ziele des Konventionen-Handbuchs
+------------------------------------------------
 
-- den DCAT-AP-CH zu ergänzen, dort wo er noch nicht mit dem DCAT-AP kompatibel ist
-- neue Features aus dem DCAT-AP zu übernehmen, und ihre Benutzung bereits zu ermöglichen, obwohl
-  sie im DCAT-AP-CH noch nicht enthalten sind
-- es dient als Referenzdokument wie der DCAT-AP-CH derzeit auf opendata.swiss implemtiert ist
-- es beschreibt das Mapping von Geodaten auf den DCAT-AP-CH
+DCAT-AP-CH erklären
+^^^^^^^^^^^^^^^^^^^^^^^^
+Es geht darum den Datenstandard erklären und Beipiele dazu geben, wie er anzuwenden ist
 
-In Summe gibt es Datapublishern eine Empfehlung, wie der DCAT-AP-CH zu benutzen ist, damit Ihre
-Daten zu jedem gegebenen Zeitpunkt bestmöglich präsentiert werden.
+DCAT-AP Kompatiblität verbessern
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Dort wo der DCAT-AP-CH zur Zeit nicht kompatibel mit dem DCAT-AP ist
+werden Lösungen erarbeitet und als Konventioen etabliert. Erweisen sie
+sich dann in der Praxis als tragfähig können die Konventione zu einem
+späteren Zeitpunkt in die nächste Version des DCAT-AP-CH einfliessen
+
+Neuerungen aus dem DCAT-AP in den DCAT-AP-CH bringen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Neue Konzepte im DCAT-AP-CH können schon als Konventionen
+umgesetzt und eingeführt werden, bevor sie schliesslich in den
+DCAT-AP-CH aufgenommen werden.
+
+Dokumentation der Implemtation auf opendata.swiss
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Das Konventionen-Handbuch dokumentiert auch die Implemantion des DCAT-AP-CH auf opendata.swiss und den
+Import von DCAT-Datenkatalog und Geodatenkatalogen.
+
+Womit möchten Sie beginnen?
+--------------------------------
+
+Einstiege in das Konventionen-Handbuch sind die folgenden:
+
+- :doc:`Konventionen für DCAT Datenkatalog <content/glossar/konventionen-dcat>`
+- :doc:`Konventionen für Geodaten Datenkatalog <content/glossar/konventionen-geo>`
+- :doc:`Übersicht über die Konventionen nach Thema <content/konventionen/konventionen>`
 
 .. toctree::
    :maxdepth: 2
@@ -44,6 +75,7 @@ Daten zu jedem gegebenen Zeitpunkt bestmöglich präsentiert werden.
    content/konventionen/katalogformate
    content/konventionen/publisher
    content/konventionen/kontaktstellen
+   content/konventionen/titel-und-beschreibung
 
 .. toctree::
    :maxdepth: 1

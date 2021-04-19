@@ -380,9 +380,19 @@ div.container.instructions p {
 /* admonition box                        */
 /*=======================================*/
 
+.rst-content .admonition
+{
+    background: white;
+}
+
 .rst-content .konvention .admonition-title
 {
-    background: lightcyan;
+    background: #099;
+}
+
+.rst-content .konvention-draft .admonition-title
+{
+    background:cornflowerblue;
 }
 
 .rst-content .general .admonition-title
@@ -390,42 +400,14 @@ div.container.instructions p {
     background: grey;
 }
 
-.rst-content .convention-outdated .admonition-title
+.rst-content .konvention-draft a
 {
-    background: darkgrey;
-}
-
-.rst-content .konvention .admonition-title
-{
-    background: #099;
+    color: white;
 }
 
 .rst-content .konvention .admonition-title a
 {
     color: white;
-}
-
-.rst-content .convention-valid .admonition-title
-{
-    background: #099;
-}
-
-.rst-content .admonition
-{
-    background: white;
-    margin-top:50px;
-}
-
-#konventionen .valid a {
-    background: #099;
-}
-
-#konventionen .outdated a {
-    color:gray;
-}
-
-#konventionen .new a {
-    color:red;
 }
 
 #term-general, #term-geo, #term-dcat {

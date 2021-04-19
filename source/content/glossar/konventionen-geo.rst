@@ -27,3 +27,6 @@ Konvention zum Mappen von Geodaten auf den DCAT-AP-CH
 
   :ref:`Konvention Kontakstellen Geodaten Datenkatalog <kontaktstellen-geodaten>`
     Konvention zum Mappen des Publisher von GM03 nach DCAT
+
+  :ref:`Konvention Titel und Beschreibung bei DCAT-Datenkatalogen <titel-beschreibung-geodaten>`
+    Konvention zum Mappen von Titel und Beschreibung GM03 nach DCAT

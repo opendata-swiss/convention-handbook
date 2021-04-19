@@ -41,8 +41,13 @@ Katalog und Dataset-Metadaten
 
 ``dct:contactPoint``
 
-    - :ref:`Kontaktstellen bei DCAT-Datenkatalogen <kontakstellen-dcat>`
-    - :ref:`Kontaktstellen von Geodaten <kontakstellen-geodaten>`
+    - :ref:`Kontaktstellen bei DCAT-Datenkatalogen <kontaktstellen-dcat>`
+    - :ref:`Kontaktstellen von Geodaten <kontaktstellen-geodaten>`
+
+``dct:title``, ``dct:description``
+
+    - :ref:`Titel und Beschreibung bei DCAT-Datenkatalogen <titel-beschreibung-dcat>`
+    - :ref:`Titel und Beschreibung bei Geodaten Datenkatalogen <titel-beschreibung-geodaten>`
 
 
 

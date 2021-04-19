@@ -35,8 +35,8 @@ Wie gebe ich die Daten zu den Publishern an?
 Publisher bei DCAT-Datenkatalogen
 -----------------------------------
 
-.. admonition:: :dcat:term:`Konvention-Publisher-DCAT-neu`
-   :class: konvention
+.. admonition:: :dcat:term:`Konvention Publisher DCAT neu`
+   :class: konvention-draft
 
    Der ``dct:publisher`` wird als ``foaf:Organization`` definiert. Er hat die Pflichtattribute
    ``foaf:name`` (Name der herausgebenden Organisation) und ``rdf:about`` (URI der Organisation)
@@ -72,6 +72,7 @@ Publisher bei DCAT-Datenkatalogen
 
     .. code-block:: xml
        :caption: dct:publisher
+       :emphasize-lines: 2,3,4
 
          <dct:publisher>
             <foaf:Organization rdf:about="https://uri-to-the-publisher">
@@ -81,6 +82,7 @@ Publisher bei DCAT-Datenkatalogen
 
 .. code-block:: xml
    :caption: Publisher im Datenkatalog
+   :emphasize-lines: 10,11,12,16,22,23,24
 
    <?xml version="1.0" encoding="utf-8"?>
    <rdf:RDF
@@ -95,14 +97,18 @@ Publisher bei DCAT-Datenkatalogen
                <foaf:name>Bundesamt für Landestopografie swisstopo</foaf:name>
             </foaf:Organization>
          </dct:publisher>
-         <dct:publisher>
-            <foaf:Organization rdf:about="https://www.swisstopo.admin.ch/some-suborganisation">
-               <foaf:name>Some suborganization</foaf:name>
-            </foaf:Organization>
-         </dct:publisher>
          <dcat:dataset>
             <dcat:Dataset rdf:about="https://uri-to-the-dataset-1">
-               <dct:publisher rdf:resource="https://www.swisstopo.admin.ch/some-suborganisation"></dct:publisher>
+               <dct:publisher rdf:resource="https://www.swisstopo.admin.ch"></dct:publisher>
+            </dcat:Dataset>
+         </dcat:dataset>
+         <dcat:dataset>
+            <dcat:Dataset rdf:about="https://uri-to-the-dataset-2">
+               <dct:publisher>
+                  <foaf:Organization rdf:about="https://www.swisstopo.admin.ch/some-suborganisation">
+                     <foaf:name>Some suborganization</foaf:name>
+                  </foaf:Organization>
+               </dct:publisher>
             </dcat:Dataset>
          </dcat:dataset>
       </dcat:Catalog>
@@ -110,27 +116,32 @@ Publisher bei DCAT-Datenkatalogen
 
 .. code-block:: turtle
    :caption: Publisher im Datenkatalog in Turtle
+   :emphasize-lines: 7,10,16,20,22
 
     @prefix dcat: <http://www.w3.org/ns/dcat#> .
-    @prefix dc: <http://purl.org/dc/terms/> .
+    @prefix dct: <http://purl.org/dc/terms/> .
     @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
     <https://uri-to-the-catalog>
       a dcat:Catalog ;
-      dc:publisher <https://www.swisstopo.admin.ch>, <https://www.swisstopo.admin.ch/some-suborganisation> ;
-      dcat:dataset <https://uri-to-the-dataset-1> .
+      dct:publisher <https://www.swisstopo.admin.ch> ;
+      dcat:dataset <https://uri-to-the-dataset-1>, <https://uri-to-the-dataset-2> .
 
     <https://www.swisstopo.admin.ch>
       a foaf:Organization ;
       foaf:name "Bundesamt für Landestopografie swisstopo" .
 
+    <https://uri-to-the-dataset-1>
+      a dcat:Dataset ;
+      dct:publisher <https://www.swisstopo.admin.ch> .
+
+    <https://uri-to-the-dataset-2>
+      a dcat:Dataset ;
+      dct:publisher <https://www.swisstopo.admin.ch/some-suborganisation> .
+
     <https://www.swisstopo.admin.ch/some-suborganisation>
       a foaf:Organization ;
       foaf:name "Some suborganization" .
-
-    <https://uri-to-the-dataset-1>
-      a dcat:Dataset ;
-      dc:publisher <https://www.swisstopo.admin.ch/some-suborganisation> .
 
 .. admonition:: :dcat:term:`Konvention Publisher DCAT`
    :class: konvention
@@ -154,6 +165,7 @@ Publisher bei DCAT-Datenkatalogen
 
     .. code-block:: xml
        :caption: dct:publisher
+       :emphasize-lines: 2,3,4
 
        <dct:publisher rdf="publisher-uri">
            <foaf:Description rdf:about="https://www.bafu.admin.ch/">
@@ -166,41 +178,14 @@ Publisher bei DCAT-Datenkatalogen
 Publisher bei Geodatenkatalogen
 -----------------------------------
 
-.. admonition:: :geo:term:`Konvention-Publisher-Geodaten-neu`
-   :class: konvention
+.. admonition:: :geo:term:`Konvention Publisher Geodaten neu`
+   :class: konvention-draft
 
-   Bei geodaten wird der Publisher wie unten beschrieben gesucht:
+   Problem: beim bisherigen Mapping fehlt ein URi für den Publisher.
+   Auf diese Weise kann keine Klasse ``foaf:organisation`` im DCAT Katalog gebildet werden. Deshalb sollte
+   das Mapping zum ``dcat:Publisher`` überarbeitet werden.
 
-.. container:: attribute
-
-    **dct:publisher**
-
-    :Display name on opendata.swiss: Publishers
-    :ISO-19139_che XPath:
-
-    .. code-block:: xml
-        :caption: Es wird erwartet, dass gmd:LocalisedCharacterString oder ein gmd:LocalisedCharacterString gesetzt ist
-
-        //gmd:contact//gmd:pointOfContact//gmd:CI_ResponsibleParty//gmd:organisationName/
-
-
-    .. code-block:: xml
-       :caption: Example of getting dct:publisher: codeListValue="pointOfContact" is detected,
-
-       <gmd:contact xmlns:che="http://www.geocat.ch/2008/che" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:srv="http://www.isotc211.org/2005/srv" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:geonet="http://www.fao.org/geonetwork">
-          <gmd:CI_ResponsibleParty>
-             <gmd:organisationName xsi:type="gmd:PT_FreeText_PropertyType">
-                <gco:CharacterString>Amt für Landschaft und Natur - Fachstelle Bodenschutz</gco:CharacterString>
-                   <gmd:PT_FreeText>
-                      <gmd:textGroup>
-                         <gmd:LocalisedCharacterString locale="#DE">Amt für Landschaft und Natur - Fachstelle Bodenschutz</gmd:LocalisedCharacterString>
-                      </gmd:textGroup>
-                   </gmd:PT_FreeText>
-             </gmd:organisationName>
-          </gmd:CI_ResponsibleParty>
-       </gmd:contact>
-
-.. admonition:: :geo:term:`Konvention-Publisher-Geodaten`
+.. admonition:: :geo:term:`Konvention Publisher Geodaten`
    :class: konvention
 
    Bei geodaten wird der Publisher wie unten beschrieben gesucht:
@@ -223,26 +208,22 @@ Publisher bei Geodatenkatalogen
         //gmd:contact//che:CHE_CI_ResponsibleParty//gmd:organisationName/gco:CharacterString
 
     .. code-block:: xml
-       :caption: Example of getting dct:publisher: codeListValue="pointOfContact" is detected,
+       :caption: Example of getting dct:publisher: codeListValue="pointOfContact" is detected
+       :emphasize-lines: 1,2,3,4,5,8,9
 
-        <gmd:pointOfContact xlink:show="embed">
-           <che:CHE_CI_ResponsibleParty xmlns:geonet="http://www.fao.org/geonetwork" gco:isoType="gmd:CI_ResponsibleParty">
-              <gmd:organisationName xsi:type="gmd:PT_FreeText_PropertyType">...</gmd:organisationName>
-              <gmd:positionName xsi:type="gmd:PT_FreeText_PropertyType">...</gmd:positionName>
-              <gmd:contactInfo>
-                 <gmd:CI_Contact>
-                    <gmd:phone>...</gmd:phone>
-                    <gmd:address>...</gmd:address>
-                    <gmd:onlineResource>...</gmd:onlineResource>
-                 </gmd:CI_Contact>
-              </gmd:contactInfo>
-              <gmd:role>
-                 <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode" codeListValue="pointOfContact"/>
-              </gmd:role>
-              <che:individualLastName>...</che:individualLastName>
-              <che:organisationAcronym xsi:type="gmd:PT_FreeText_PropertyType">...</che:organisationAcronym>
-           </che:CHE_CI_ResponsibleParty>
-        </gmd:pointOfContact>
+       <gmd:identificationInfo>
+          <gmd:pointOfContact>
+             <gmd:CI_ResponsibleParty>
+                <gmd:organisationName xsi:type="gmd:PT_FreeText_PropertyType">
+                   <gco:CharacterString>Bundesamt für Strassen</gco:CharacterString>
+                </gmd:organisationName>
+                <gmd:role>
+                   <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode"
+                                    codeListValue="pointOfContact"/>
+                </gmd:role>
+             </gmd:CI_ResponsibleParty>
+          </gmd:pointOfContact>
+       </gmd:identificationInfo>
 
 .. container:: materialien
 

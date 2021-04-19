@@ -19,7 +19,7 @@ Konvention zum DCAT-AP-CH
   :ref:`Konvention Publisher DCAT <publisher-dcat>`
     derzeit gültige Konvention zur Besetzung des Publisher im DCAT-Katalog
 
-  :ref:`Konvention Publisher DCAT (neu) <publisher-dcat>`
+  :ref:`Konvention Publisher DCAT neu <publisher-dcat>`
     neue Konvention zur Besetzung des Publisher im DCAT-Katalog: in Planung
 
   :ref:`Konvention Namespaces DCAT-AP-CH <namespaces-dcat-ap-ch>`
@@ -29,6 +29,8 @@ Konvention zum DCAT-AP-CH
   :ref:`Konvention DCAT Datenkatalog Format <katalogformate-dcat>`
     Konvention zu den RDF Formaten für DCAT-Datenkataloge
 
-  :ref:`Konvention Kontakstellen DCAT Datenkatalog <kontaktstellen-dcat>`
-    zKonvention zur Besetzung der Kontakstellen im DCAT-Katalog
+  :ref:`Konvention Kontakstellen bei DCAT-Datenkatalogen <kontaktstellen-dcat>`
+    Konvention zur Besetzung der Kontakstellen im DCAT-Katalog
 
+  :ref:`Konvention Titel und Beschreibung bei DCAT-Datenkatalogen <titel-beschreibung-dcat>`
+    Konvention zu Titel und Beschreibung im DCAT-Katalog

@@ -16,9 +16,11 @@ In welchem Format definiere ich meinen Datenkatalog?
    Datenkatalog dienen zum Weiterreichen der Metadaten über vorhandene physische Ressourcen. Damit diese Weitergabe
    klappt muss vereinbart werden in welchen Formaten diese Datenkataloge erwartet und interpretiert
    werden können. Dies ist unabhängig vom Datenstandard (:term:`DCAT-AP-CH`). Vielmehr hängt es vom Datenportal
-   ab, welche Daten dort importiert werden kömnen. Das ist in diesem Falls :term:`opendata.swiss`.
-   Derzeit können nur DCAT-Datenkatalog im Format :term:`rdf/xml` und Geodatenkatalog im Format :term:`csw`
-   importiert werden. Es ist möglich, dass sich die Anzahl der verstandenen Datenformate in Zukunft erweitert.
+   ab, welche Daten importiert, also von :term:`opendata.swiss` in diesem Fall.
+
+   Derzeit können nur DCAT-Datenkatalog im Format :term:`rdf/xml` und Geodatenkatalog im Format
+   :term:`csw`
+   importiert werden.
 
 Überblick
 -------------------------------------------
