@@ -35,7 +35,7 @@ Wie gebe ich die Daten zu den Publishern an?
 Publisher bei DCAT-Datenkatalogen
 -----------------------------------
 
-.. admonition:: :dcat:term:`Konvention Publisher DCAT neu`
+.. admonition:: :neu:term:`Konvention Publisher DCAT neu`
    :class: konvention-draft
 
    Der ``dct:publisher`` wird als ``foaf:Organization`` definiert. Er hat die Pflichtattribute
@@ -178,7 +178,7 @@ Publisher bei DCAT-Datenkatalogen
 Publisher bei Geodatenkatalogen
 -----------------------------------
 
-.. admonition:: :geo:term:`Konvention Publisher Geodaten neu`
+.. admonition:: :neu:term:`Konvention Publisher Geodaten neu`
    :class: konvention-draft
 
    Problem: beim bisherigen Mapping fehlt ein URi für den Publisher.

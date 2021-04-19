@@ -12,15 +12,13 @@ Konvention zum Mappen von Geodaten auf den DCAT-AP-CH
 
 .. container:: Intro
 
-   Hier finden Sie eine komplette Liste aller Konventionen für den DCAT Datenkataloge.
+   Hier finden Sie eine komplette Liste aller aktuell gültigen Konventionen zum
+   Mapping von Geodaten auf den DCAT-AP-CH.
 
 .. glossary:: geo
 
   :ref:`Konvention Publisher Geodaten <publisher-geodaten>`
     derzeit gültige Konvention zum Mappen des Publisher von GM03 nach DCAT
-
-  :ref:`Konvention Publisher Geodaten neu <publisher-geodaten>`
-    neue Konvention zum Mappen des Publisher von GM03 nach DCAT: in Plannung
 
   :ref:`Konvention Geodaten Datenkatalog Format <katalogformate-geodaten>`
     Konvention zu den GM03 Formaten für Geodaten-Datenkataloge

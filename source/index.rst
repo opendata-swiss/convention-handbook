@@ -85,6 +85,7 @@ Einstiege in das Konventionen-Handbuch sind die folgenden:
    content/glossar/begriffe
    content/glossar/konventionen-dcat
    content/glossar/konventionen-geo
+   content/glossar/konventionen-neu
 
 .. toctree::
    :maxdepth: 1

@@ -12,15 +12,12 @@ Konvention zum DCAT-AP-CH
 
 .. container:: Intro
 
-   Hier finden Sie eine komplette Liste aller Konventionen zum DCAT-AP-CH
+   Hier finden Sie eine komplette Liste aller aktuell gültigen Konventionen zum DCAT-AP-CH.
 
 .. glossary:: dcat
 
   :ref:`Konvention Publisher DCAT <publisher-dcat>`
     derzeit gültige Konvention zur Besetzung des Publisher im DCAT-Katalog
-
-  :ref:`Konvention Publisher DCAT neu <publisher-dcat>`
-    neue Konvention zur Besetzung des Publisher im DCAT-Katalog: in Planung
 
   :ref:`Konvention Namespaces DCAT-AP-CH <namespaces-dcat-ap-ch>`
     Konvention zu den Namespaces, die vom DCAT-AP-CH benutzt werden und

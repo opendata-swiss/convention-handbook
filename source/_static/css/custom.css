@@ -392,7 +392,7 @@ div.container.instructions p {
 
 .rst-content .konvention-draft .admonition-title
 {
-    background:cornflowerblue;
+    background:red;
 }
 
 .rst-content .general .admonition-title
@@ -410,7 +410,7 @@ div.container.instructions p {
     color: white;
 }
 
-#term-general, #term-geo, #term-dcat {
+#term-general, #term-geo, #term-dcat, #term-neu {
     display:none;
 }
 
