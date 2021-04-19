@@ -59,6 +59,7 @@ Einstiege in das Konventionen-Handbuch sind die folgenden:
 - :doc:`Konventionen für DCAT Datenkatalog <content/glossar/konventionen-dcat>`
 - :doc:`Konventionen für Geodaten Datenkatalog <content/glossar/konventionen-geo>`
 - :doc:`Übersicht über die Konventionen nach Thema <content/konventionen/konventionen>`
+- :doc:`Neue Konventionen in Vorbereitung <content/glossar/konventionen-neu>`
 
 .. toctree::
    :maxdepth: 2
