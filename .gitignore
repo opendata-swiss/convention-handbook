@@ -2,3 +2,4 @@ build
 .idea
 *.mo
 p3venv
+*.tar.gz

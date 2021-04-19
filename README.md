@@ -51,3 +51,20 @@ You can run it with make:
 ```
 (p3venv)make linkcheck
 ``` 
+
+## Deploy to a Static Server
+
+Get to server:
+
+```
+ssh -p 2202 -l liip ps8.ms.bsa.oriented.ch
+cd /var/www/html/ogdch-new-convention-handbook.clients.liip.ch
+```
+
+deploy handbook
+
+```
+tar -zcf ogdch-convention-handbook.tar.gz build/html/
+scp -P 2202 ogdch-convention-handbook.tar.gz liip ps8.ms.bsa.oriented.ch:/var/www/html/ogdch-new-convention-handbook.clients.liip.ch
+``` 
+
