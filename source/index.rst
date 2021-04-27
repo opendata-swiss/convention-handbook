@@ -8,42 +8,45 @@
    - :fa:`home` Konventionen-Handbuch
 
 ***************************************
-Konventionen Handbuch
+Convention Handbook
 ***************************************
 
-Dieses Konvetions-Handbuch ergänzt das Handbuch von opendata.swiss
-zu Fragen, die das Schweizer DCAT Anwednungsprofil DCAT-AP-CH betreffen.
+This Convention Handbook is meant to support the further development of the
+Swiss DCAT Application Profile for Dataportals: DCAT-AP-CH.
 
 
-Warum braucht es ein Konventionen Handbuch?
+Purpose of the Convention Handbook
 ----------------------------------------------
-Datenstandards ändern sich nur langsam und benötigen viele Abstimmungen.
-Die Anwendung von Datenstandards hingegen orientiert sich an den praktischen Bedürfnissen
-der Datennutzer und Datenpublizierenden. Ziel ist es auf solche Bedürfnisse
-in Zukunft schneller reagieren zu können. Ein solches Bedürfnis ist etwa
-die Kompatibilität mit dem europäischen DCAT Anwendungsprofil DCAT-AP.
+Datastandard as the DCAT-AP-CH change at a slow pace and have to go through many reviews
+before they finally get accepted.
+The practical needs of the Datapublishers and Datauser
+shift on a faster pace and are often
+triggered by outside circumstances such as new software, changes is in the DCAT-AP,
+changing needs in the society.
+Conventions help to bridge this gap. They prepare
+the next version of the DCAT-AP-CH, by implementing new rules as conventions first before they
+become part of the next version of the Standard.
 
-Ziele des Konventionen-Handbuchs
+Goals of the Convention Handbook
 ------------------------------------------------
 
-DCAT-AP-CH erklären
+Explain the DCAT-AP-CH
 ^^^^^^^^^^^^^^^^^^^^^^^^
-Es geht darum den Datenstandard erklären und Beipiele dazu geben, wie er anzuwenden ist
+Explain the current DCAT-AP-CH and give examples on how to apply it.
 
-DCAT-AP Kompatiblität verbessern
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Improve the compatablity to the DCAT-AP
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Dort wo der DCAT-AP-CH zur Zeit nicht kompatibel mit dem DCAT-AP ist
 werden Lösungen erarbeitet und als Konventioen etabliert. Erweisen sie
 sich dann in der Praxis als tragfähig können die Konventione zu einem
 späteren Zeitpunkt in die nächste Version des DCAT-AP-CH einfliessen
 
-Neuerungen aus dem DCAT-AP in den DCAT-AP-CH bringen
+Add new features from the DCAT-AP
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Neue Konzepte im DCAT-AP-CH können schon als Konventionen
-umgesetzt und eingeführt werden, bevor sie schliesslich in den
-DCAT-AP-CH aufgenommen werden.
+Some features form the DCAT-AP can be added as conventions before being added to the Swiss application profile
+DCAT-AP-CH
 
 Dokumentation der Implemtation auf opendata.swiss
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -71,12 +74,19 @@ Einstiege in das Konventionen-Handbuch sind die folgenden:
    :maxdepth: 2
    :caption: Konventionen
 
-   content/konventionen/konventionen
-   content/konventionen/namespaces
-   content/konventionen/katalogformate
-   content/konventionen/publisher
-   content/konventionen/kontaktstellen
-   content/konventionen/titel-und-beschreibung
+   content/conventions/conventions
+   content/conventions/namespaces
+   content/conventions/katalogformate
+   content/conventions/properties/publisher-contact-points
+   content/conventions/properties/titel-and-description
+   content/conventions/titel-and-description
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Examples
+
+   content/examples/publisher
 
 .. toctree::
    :maxdepth: 1

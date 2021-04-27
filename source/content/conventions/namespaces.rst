@@ -1,7 +1,7 @@
 .. container:: custom-breadcrumbs
 
-   - :fa:`home` :doc:`Konventionen-Handbuch <../../index>` :fa:`chevron-right`
-   - :doc:`Konventionen <../konventionen>` :fa:`chevron-right`
+   - :fa:`home` :doc:`Conventions-Handbook <../../index>` :fa:`chevron-right`
+   - :doc:`Conventions <../conventions>` :fa:`chevron-right`
    - Namespaces
 
 *********************

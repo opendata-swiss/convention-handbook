@@ -1,19 +1,28 @@
 .. container:: custom-breadcrumbs
 
-   - :fa:`home` :doc:`Konventionen-Handbuch <../../index>` :fa:`chevron-right`
-   - :doc:`Konventionen <../konventionen>` :fa:`chevron-right`
-   - Kontaktstellen
+   - :fa:`home` :doc:`Conventionen-Handbook <../../index>` :fa:`chevron-right`
+   - :doc:`Conventions <../conventions>` :fa:`chevron-right`
+   - Contact Points
 
 *************************
-Kontaktstellen
+Contact Points
 *************************
 
-Wie gebe ich Kontaktstellen für meine Daten an?
+How do I add contact points for my dataset?
 ==========================================================
 
-.. container:: Intro
+.. admonition:: :dcatap:`DCAT-AP`
+   :class: dcat-ap
 
-   Der :term:`DCAT-AP` versteht unter dem ``dcat:contactPoint`` eine Kontaktstelle
+   The :term:`DCAT-AP` versteht unter dem ``dcat:contactPoint`` eine Kontaktstelle
+   für eine Dataset. Das Attribut ist im DCAT-AP empfohlen. Es ist pro Dataset
+   defniert. Hinsichtlich der Anzahl der Kontaktstellen gibt es im DCAT-AP keine Einschränkung.
+   Im DCAT-AP-CH ist das Feld ein Pflichtfeld, das ebenfalls auf der Ebene des Datasets erwartet wird.
+   Es kann pro Dataset mehrere Kontakstellen geben.
+
+.. container:: DCAT-AP-CH
+
+   The :term:`DCAT-AP` versteht unter dem ``dcat:contactPoint`` eine Kontaktstelle
    für eine Dataset. Das Attribut ist im DCAT-AP empfohlen. Es ist pro Dataset
    defniert. Hinsichtlich der Anzahl der Kontaktstellen gibt es im DCAT-AP keine Einschränkung.
    Im DCAT-AP-CH ist das Feld ein Pflichtfeld, das ebenfalls auf der Ebene des Datasets erwartet wird.

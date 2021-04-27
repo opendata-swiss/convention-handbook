@@ -1,7 +1,7 @@
 .. container:: custom-breadcrumbs
 
-   - :fa:`home` :doc:`Konventionen-Handbuch <../../index>` :fa:`chevron-right`
-   - Konventionen
+   - :fa:`home` :doc:`Conventionen-Handbook <../../index>` :fa:`chevron-right`
+   - Conventions
 
 *********************
 Auf einen Blick

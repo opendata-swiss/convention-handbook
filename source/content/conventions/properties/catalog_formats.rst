@@ -1,6 +1,6 @@
 .. container:: custom-breadcrumbs
 
-   - :fa:`home` :doc:`Handbuch <../../index>` :fa:`chevron-right`
+   - :fa:`home` :doc:`Konventionen-Handbuch <../../index>` :fa:`chevron-right`
    - :doc:`Konventionen <../konventionen>` :fa:`chevron-right`
    - Datenkatalog-Formate
 

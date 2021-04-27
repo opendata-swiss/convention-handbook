@@ -1,33 +1,32 @@
 .. container:: custom-breadcrumbs
 
-   - :fa:`home` :doc:`Konventionen-Handbuch <../../index>` :fa:`chevron-right`
-   - :doc:`Konventionen <../konventionen>` :fa:`chevron-right`
-   - Titel und Beschreibung
+   - :fa:`home` :doc:`Conventions-Handbook <../../index>` :fa:`chevron-right`
+   - :doc:`Conventions <../conventions>` :fa:`chevron-right`
+   - Title and Description
 
 ************************************************************************************
-Titel und Beschreibung
+Title and Description
 ************************************************************************************
 
-Wie benenne und beschreibe ich ein Dataset, den Datenkatalog, die Distributionen?
+How do I name and describe my dataset and distributions?
 ===================================================================================
 
 .. container:: Intro
 
-   Der :term:`DCAT-AP` sind ``dcat:title`` und ``dct: description`` Pflichtfelder
-   für das ``dcat:Dataset``  und den ``dcat:Catalog``. Bei ``dcat:Distribution`` sind diese
-   Felder optional.
-   Im DCAT-AP kann es mehrere Titel und Beschreibungen geben: dabei ist an Titel und Beschreibungen
-   in verschiedenen Sprachen gedacht.
-   Der DCAT-AP-CH ist in diesen Attributen kompatibel mit dem DCAT-AP und hat genau dieselben
-   Regeln für diese Attribute.
+   For the :term:`DCAT-AP` ``dcat:title`` and ``dct: description`` are mandatory
+   for ``dcat:Dataset``, the ``dcat:Catalog``. For ``dcat:Distribution`` these properties are
+   optional. It is possible to add more then one title and description: one for each language.
+
+   The :term:`DCAT-AP-CH` is compatible with the DCAT-AP and the rules are the same on both
+   application profiles.
 
 Überblick
 -------------------------------------------
 
-- :ref:`Titel und Beschreibung bei DCAT-Datenkatalogen <titel-beschreibung-dcat>`
-- :ref:`Titel und Beschreibung bei Geodaten Datenkatalogen <titel-beschreibung-geodaten>`
+- :ref:`Title and Description for DCAT-catalogs <title-description-dcat>`
+- :ref:`Title and Description for GEOCAT-catalogs <titel-description-geocat>`
 
-.. _titel-beschreibung-dcat:
+.. _title-description-dcat:
 
 Titel und Beschreibung bei DCAT-Datenkatalogen
 ----------------------------------------------------
@@ -83,7 +82,7 @@ Titel und Beschreibung bei DCAT-Datenkatalogen
            durch den Schienenverkehr ausgesetzt ist.
        </dct:description>
 
-.. _titel-beschreibung-geodaten:
+.. _title-description-dcat:
 
 Titel und Beschreibung bei Geodaten Datenkatalogen
 ----------------------------------------------------
