@@ -8,17 +8,29 @@
 Title and Description
 ************************************************************************************
 
-How do I name and describe my dataset and distributions?
-===================================================================================
+:Properties:  ``dct:title``, ``dct:decription``
+:Classes:     ``dcat:Catalog``, ``dcat:Dataset``, ``dcat:Distribution``
 
-.. container:: Intro
+.. admonition:: DCAT-AP
+   :class: dcatap
 
-   For the :term:`DCAT-AP` ``dcat:title`` and ``dct: description`` are mandatory
-   for ``dcat:Dataset``, the ``dcat:Catalog``. For ``dcat:Distribution`` these properties are
-   optional. It is possible to add more then one title and description: one for each language.
+   The :term:`DCAT-AP` recommends ``dcat:contactPoint``:
 
-   The :term:`DCAT-AP-CH` is compatible with the DCAT-AP and the rules are the same on both
-   application profiles.
+   :1:n: ``dcat:title`` and ``dct: description`` are mandatory
+         for ``dcat:Dataset``, the ``dcat:Catalog``
+   :0:n: ``dcat:title`` and ``dct: description`` are optional for ``dcat:Distribution``
+
+   There can be more than one title and description: one for each supported language
+
+.. admonition:: DCAT-AP-CH
+   :class: dcatapch
+
+   :DCAT-AP: conformant
+   :opendata.swiss: conformant
+
+   - one of the languages de, fr, it or en is expected
+   - consider to require en as a language, so that the dataset shows a title and description on the
+     European Dataportal
 
 Überblick
 -------------------------------------------
@@ -28,11 +40,11 @@ How do I name and describe my dataset and distributions?
 
 .. _title-description-dcat:
 
-Titel und Beschreibung bei DCAT-Datenkatalogen
+Title and Description DCAT
 ----------------------------------------------------
 
-.. admonition:: :dcat:term:`Konvention Titel und Beschreibung bei  Geodaten Datenkatalogen`
-   :class: konvention
+.. admonition:: :dcat:term:`dct:title dct:description`
+   :class: convention
 
    Titel und Beschreibung sind Pflichtattribute für ``dcat:Catalog`` und ``dcat:Dataset``.
    Sie sind optional für ``dcat:Distribution``.
@@ -82,26 +94,31 @@ Titel und Beschreibung bei DCAT-Datenkatalogen
            durch den Schienenverkehr ausgesetzt ist.
        </dct:description>
 
-.. _title-description-dcat:
+.. _title-description-gm03:
 
-Titel und Beschreibung bei Geodaten Datenkatalogen
+Title and Description GM03
 ----------------------------------------------------
 
-.. admonition:: :geo:term:`Konvention Titel und Beschreibung bei Geodaten-Datenkatalogen`
-   :class: konvention
+.. admonition:: :geo:term:`GM03 dataset title and description`
+   :class: convention
 
-    Bei Geodaten werden Titel und Beschreibung wie folgt gemapped:
+    The dataset title and description are mapped  as follows
 
 .. container:: attribute
 
     **dct:title**
 
-    :Display name on opendata.swiss: Pagetitle
     :ISO-19139_che XPath:
 
-    .. code:: xml
+    .. code-block:: xml
+       :caption: dct:title for dcat:Datasets
 
        //gmd:identificationInfo//gmd:citation//gmd:title//gmd:textGroup/gmd:LocalisedCharacterString
+
+    .. code-block:: xml
+       :caption: dct:description for dcat:Datasets
+
+       //gmd:transferOptions//gmd:CI_OnlineResource//gmd:description//gmd:LocalisedCharacterString
 
     .. code-block:: xml
        :caption: Example of getting dct:title: only 4 languages are taken: DE, EN, FR, IT
@@ -174,4 +191,22 @@ Titel und Beschreibung bei Geodaten Datenkatalogen
           </gmd:PT_FreeText>
        </gmd:abstract>
 
+.. admonition:: :geo:term:`GM03 distribution title and description`
+   :class: convention
+
+
+    .. code-block:: xml
+       :caption: dct:title for dcat:Distribution for Protocol WWW:DOWNLOAD-1.0-http--download
+
+       //srv:operationName/gco:CharacterString
+
+    .. code-block:: xml
+       :caption: dct:title for dcat:Distribution for Protocol WWW:DOWNLOAD-1.0-http--download
+
+       //gmd:distributionInfo//gmd:transferOptions/gmd:name
+
+    .. code-block:: xml
+       :caption: dct:title for dcat:Distribution for Protocol WWW:DOWNLOAD-1.0-http--download
+
+       //gmd:transferOptions//gmd:CI_OnlineResource//gmd:protocol/gco:CharacterString
 

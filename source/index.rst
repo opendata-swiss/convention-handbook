@@ -77,9 +77,13 @@ Einstiege in das Konventionen-Handbuch sind die folgenden:
    content/conventions/conventions
    content/conventions/namespaces
    content/conventions/katalogformate
-   content/conventions/properties/publisher-contact-points
-   content/conventions/properties/titel-and-description
-   content/conventions/titel-and-description
+   content/conventions/properties/publisher
+   content/conventions/properties/contact-points
+   content/conventions/properties/title-and-description
+   content/conventions/properties/keywords
+   content/conventions/properties/language
+   content/conventions/properties/coverage
+   content/conventions/properties/landing-page
 
 
 .. toctree::

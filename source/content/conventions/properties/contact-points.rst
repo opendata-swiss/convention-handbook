@@ -4,51 +4,39 @@
    - :doc:`Conventions <../conventions>` :fa:`chevron-right`
    - Contact Points
 
-*************************
+******************************
 Contact Points
-*************************
+******************************
 
-How do I add contact points for my dataset?
-==========================================================
+.. admonition:: dct:publisher and dct:contact point in DCAT-AP
+   :class: dcatap
 
-.. admonition:: :dcatap:`DCAT-AP`
-   :class: dcat-ap
+   The :term:`DCAT-AP` recommends ``dcat:contactPoint``:
 
-   The :term:`DCAT-AP` versteht unter dem ``dcat:contactPoint`` eine Kontaktstelle
-   für eine Dataset. Das Attribut ist im DCAT-AP empfohlen. Es ist pro Dataset
-   defniert. Hinsichtlich der Anzahl der Kontaktstellen gibt es im DCAT-AP keine Einschränkung.
-   Im DCAT-AP-CH ist das Feld ein Pflichtfeld, das ebenfalls auf der Ebene des Datasets erwartet wird.
-   Es kann pro Dataset mehrere Kontakstellen geben.
+   - as a contact person to define for each dataset
+   - ``dcat:contactPoint`` is supposed to be of ``vcard:kind``
+   - It does not have to be a person in the same organization as the dct:publisher.
 
-.. container:: DCAT-AP-CH
+.. admonition:: dct:publisher and dct:contact point in DCAT-AP-CH
+   :class: dcatapch
 
-   The :term:`DCAT-AP` versteht unter dem ``dcat:contactPoint`` eine Kontaktstelle
-   für eine Dataset. Das Attribut ist im DCAT-AP empfohlen. Es ist pro Dataset
-   defniert. Hinsichtlich der Anzahl der Kontaktstellen gibt es im DCAT-AP keine Einschränkung.
-   Im DCAT-AP-CH ist das Feld ein Pflichtfeld, das ebenfalls auf der Ebene des Datasets erwartet wird.
-   Es kann pro Dataset mehrere Kontakstellen geben.
+    - ``dcat:contactPoint`` is conformant with the DCAT-AP-CH and its implementaion on opendata.swiss is also
+      conformant
 
-.. admonition:: Beziehung zwischen Kontaktstelle und Publisher
-   :class: general
 
-   Die Unterscheidung zwischen Publisher und Kontaktstellen kommt von DCAT-AP: der Publisher ist eine
-   Organisation, während es sich bei den Kontaktstellen um Person,
-   eben einen Ansprechpartner für ein Datasets handelt handelt. Es ist nicht zwingend, dass Kontakstellen
-   ``dcat:contactPoint`` bei der herausgebenden Organisation ``dct:publisher`` angesiedelt sind.
-
-Überblick
+Overview
 -------------------------------------------
 
-- :ref:`Kontakstellen bei DCAT-Datenkatalogen <kontaktstellen-dcat>`
-- :ref:`Kontaktstellen bei Geodaten Datenkatalogen <kontaktstellen-geodaten>`
+- :ref:`Contact Point for DCAT-Catalogs <contact-points-dcat>`
+- :ref:`Contact Point for Geocat Catalogs <contact-points-geocat>`
 
-.. _kontaktstellen-dcat:
+.. _publisher-dcat:
 
-Kontaktstellen bei DCAT-Datenkatalogen
+Contact Points for DCAT-Catalogs
 -----------------------------------------------
 
 .. admonition:: :konventionen:term:`Konvention Kontakstellen DCAT`
-   :class: konvention
+   :class: convention
 
    Der ``dct:publisher`` wird als ``rdf:Description`` definiert. Er hat die Pflichtattribute
    ``rdfs:label`` (Name der herausgebenden Organisation) und ein optionales Attribut
@@ -87,13 +75,13 @@ Kontaktstellen bei DCAT-Datenkatalogen
            </vcard:Individual>
        </dcat:contactPoint>
 
-.. _kontaktstellen-geodaten:
+.. _contact-points-geocat:
 
-Kontaktstellen bei Geodaten Datenkatalogen
+Contact Points for Geocat Catalogs
 -----------------------------------------------
 
 .. admonition:: :dcat:term:`Konvention Kontaktstellen Geodaten`
-   :class: konvention
+   :class: convention
 
    Bei geodaten wird der Publisher wie unten beschrieben gesucht:
 
@@ -101,7 +89,6 @@ Kontaktstellen bei Geodaten Datenkatalogen
 
     **dcat:contactPoint**
 
-    :Display name on opendata.swiss: Contact points
     :ISO-19139_che XPath:
 
     .. code-block:: xml
@@ -139,12 +126,5 @@ Kontaktstellen bei Geodaten Datenkatalogen
              </gmd:CI_ResponsibleParty>
           <gmd:pointOfContact>
        </gmd:identificationInfo>
-
-.. container:: materialien
-
-   Mehr zum Thema
-
-- `Zur Unterscheidung zwischen Publishern und Kontaktstellen im DCAT-AP <https://joinup.ec.europa.eu/release/how-are-publisher-and-contact-point-modelled>`__ –
-   Artikel zur Unterscheidung zwischen ``dct:publisher``und ``dct:ContactPoint``
 
 
