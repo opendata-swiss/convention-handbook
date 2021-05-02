@@ -2,8 +2,9 @@
 
    - :fa:`home` :doc:`Conventionen-Handbook <../../index>` :fa:`chevron-right`
    - :doc:`Conventions <../conventions>` :fa:`chevron-right`
-   - Dataset
+   - Agent
 
 ***************
-dcat:Dataset
+foaf:Agent
 ***************
+

@@ -1,0 +1,156 @@
+:Dataset_Shape
+    a sh:NodeShape ;
+    sh:name "Dataset"@en ;
+    sh:property [
+        sh:minCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path dct:description ;
+        sh:severity sh:Violation
+    ], [
+        sh:minCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path dct:title ;
+        sh:severity sh:Violation
+    ], [
+        sh:nodeKind sh:Literal ;
+        sh:path dct:identifier ;
+        sh:severity sh:Violation
+    ], [
+        sh:class vcard:Kind ;
+        sh:path dcat:contactPoint ;
+        sh:severity sh:Violation
+    ], [
+        sh:class dcat:Distribution ;
+        sh:path dcat:distribution ;
+        sh:severity sh:Violation
+    ], [
+        sh:nodeKind sh:Literal ;
+        sh:path dcat:keyword ;
+        sh:severity sh:Violation
+    ], [
+        sh:class foaf:Agent ;
+        sh:maxCount 1 ;
+        sh:path dct:publisher ;
+        sh:severity sh:Violation
+    ], [
+        sh:class dct:Location ;
+        sh:path dct:spatial ;
+        sh:severity sh:Violation
+    ], [
+	sh:class dct:PeriodOfTime ;
+        sh:path dct:temporal ;
+        sh:severity sh:Violation
+    ], [
+        sh:class skos:Concept ;
+        sh:path dcat:theme ;
+        sh:severity sh:Violation
+    ], [
+        sh:class dct:RightsStatement ;
+        sh:maxCount 1 ;
+        sh:path dct:accessRights ;
+        sh:severity sh:Violation
+    ], [
+        sh:class dct:Frequency ;
+        sh:maxCount 1 ;
+        sh:path dct:accrualPeriodicity ;
+        sh:severity sh:Violation
+    ], [
+        sh:class dct:Standard ;
+        sh:path dct:conformsTo ;
+        sh:severity sh:Violation
+    ], [
+        sh:class dcat:Dataset ;
+        sh:path dct:hasVersion ;
+        sh:severity sh:Violation
+    ], [
+        sh:class dcat:Dataset ;
+        sh:path dct:isVersionOf ;
+        sh:severity sh:Violation
+    ], [
+        sh:maxCount 1 ;
+        sh:path dct:issued ;
+        sh:severity sh:Violation ;
+        sh:shape :DateOrDateTimeDataType_Shape
+    ], [
+        sh:class dct:LinguisticSystem ;
+        sh:path dct:language ;
+        sh:severity sh:Violation
+    ], [
+        sh:maxCount 1 ;
+        sh:path dct:modified ;
+        sh:severity sh:Violation ;
+        sh:shape :DateOrDateTimeDataType_Shape
+    ], [
+        sh:class dct:ProvenanceStatement ;
+        sh:path dct:provenance ;
+        sh:severity sh:Violation
+    ], [
+        sh:nodeKind sh:BlankNodeOrIRI ;
+        sh:path dct:relation ;
+        sh:severity sh:Violation
+    ], [
+        sh:class dcat:Dataset ;
+        sh:path dct:source ;
+        sh:severity sh:Violation
+    ], [
+        sh:maxCount 1 ;
+        sh:class skos:Concept ;
+        sh:path dct:type ;
+        sh:severity sh:Violation
+    ], [
+        sh:maxCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path owl:versionInfo ;
+        sh:severity sh:Violation
+    ], [
+        sh:nodeKind sh:Literal ;
+        sh:path adms:versionNotes ;
+        sh:severity sh:Violation
+    ], [
+        sh:class adms:Identifier ;
+        sh:path adms:identifier ;
+        sh:severity sh:Violation
+    ], [
+        sh:class dcat:Distribution ;
+        sh:path adms:sample ;
+        sh:severity sh:Violation
+    ], [
+        sh:class foaf:Document ;
+        sh:path dcat:landingPage ;
+        sh:severity sh:Violation
+    ], [
+        sh:class foaf:Document ;
+        sh:path foaf:page ;
+        sh:severity sh:Violation
+    ], [
+        sh:class dcat:Relationship ;
+        sh:path dcat:qualifiedRelation ;
+        sh:severity sh:Violation
+    ], [
+        sh:nodeKind sh:BlankNodeOrIRI ;
+        sh:path dc:isReferencedBy ;
+        sh:severity sh:Violation
+    ], [
+        sh:class prov:Attribution ;
+        sh:path prov:qualifiedAttribution ;
+        sh:severity sh:Violation
+    ], [
+        sh:class prov:Activity ;
+        sh:path prov:wasGeneratedBy ;
+        sh:severity sh:Violation
+    ], [
+        sh:datatype xsd:duration ;
+        sh:path dcat:temporalResolution ;
+        sh:severity sh:Violation
+    ], [
+        sh:datatype xsd:decimal ;
+        sh:path dcat:spatialResolutionInMeters ;
+        sh:severity sh:Violation
+    ], [
+        sh:class foaf:Agent ;
+        sh:maxCount 1 ;
+        sh:path dct:creator ;
+        sh:severity sh:Violation
+    ] ;
+    sh:targetClass dcat:Dataset .
+

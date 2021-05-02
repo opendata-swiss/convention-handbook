@@ -8,7 +8,7 @@
 Contact Points
 ******************************
 
-.. admonition:: dct:publisher and dct:contact point in DCAT-AP
+.. admonition:: DCAT-AP
    :class: dcatap
 
    The :term:`DCAT-AP` recommends ``dcat:contactPoint``:

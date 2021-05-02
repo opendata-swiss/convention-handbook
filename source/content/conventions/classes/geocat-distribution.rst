@@ -2,8 +2,8 @@
 
    - :fa:`home` :doc:`Conventionen-Handbook <../../index>` :fa:`chevron-right`
    - :doc:`Conventions <../conventions>` :fa:`chevron-right`
-   - Dataset
+   - Geocat Distributions
 
-***************
-dcat:Dataset
-***************
+*********************
+Geocat Distributions
+*********************

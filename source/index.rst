@@ -68,15 +68,25 @@ Einstiege in das Konventionen-Handbuch sind die folgenden:
    :maxdepth: 2
    :caption: Basiswissen
 
+   content/konventionen/dataformats
+   content/konventionen/namespaces
    content/konventionen/dcatapch
 
 .. toctree::
    :maxdepth: 2
-   :caption: Konventionen
+   :caption: Classes
+
+   content/conventions/classes/agent
+   content/conventions/classes/catalog
+   content/conventions/classes/dataset
+   content/conventions/classes/distribution
+   content/conventions/classes/geocat-distribution
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Properties
 
    content/conventions/conventions
-   content/conventions/namespaces
-   content/conventions/katalogformate
    content/conventions/properties/publisher
    content/conventions/properties/contact-points
    content/conventions/properties/title-and-description
@@ -84,6 +94,14 @@ Einstiege in das Konventionen-Handbuch sind die folgenden:
    content/conventions/properties/language
    content/conventions/properties/coverage
    content/conventions/properties/landing-page
+   content/conventions/properties/relation
+   content/conventions/properties/see_alsos
+   content/conventions/properties/temporal
+   content/conventions/properties/issued
+   content/conventions/properties/modified
+   content/conventions/properties/theme
+   content/conventions/properties/rights-license
+   content/conventions/properties/accrual-periodicity
 
 
 .. toctree::

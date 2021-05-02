@@ -14,11 +14,9 @@ Title and Description
 .. admonition:: DCAT-AP
    :class: dcatap
 
-   The :term:`DCAT-AP` recommends ``dcat:contactPoint``:
-
-   :1:n: ``dcat:title`` and ``dct: description`` are mandatory
-         for ``dcat:Dataset``, the ``dcat:Catalog``
-   :0:n: ``dcat:title`` and ``dct: description`` are optional for ``dcat:Distribution``
+   :dcat:Dataset 1:n: ``dcat:title`` and ``dct: description`` are mandatory
+   :dcat:Catalog 1:n:  ``dcat:title`` and ``dct: description`` are mandatory
+   :dcat:Distribution 0:n: ``dcat:title`` and ``dct: description`` are optional
 
    There can be more than one title and description: one for each supported language
 
@@ -26,7 +24,7 @@ Title and Description
    :class: dcatapch
 
    :DCAT-AP: conformant
-   :opendata.swiss: conformant
+   :opendata.swiss: dcat:Catalog title and description are currrently not used
 
    - one of the languages de, fr, it or en is expected
    - consider to require en as a language, so that the dataset shows a title and description on the
@@ -46,10 +44,11 @@ Title and Description DCAT
 .. admonition:: :dcat:term:`dct:title dct:description`
    :class: convention
 
-   Titel und Beschreibung sind Pflichtattribute für ``dcat:Catalog`` und ``dcat:Dataset``.
-   Sie sind optional für ``dcat:Distribution``.
-   Es sollten jeweils mindestens eine Landesprache und Englisch besetzt sein.
-   Englisch ist die Sprache, die auf das europäische Datenportal übernommen wird.
+   Title and description are manatory on ``dcat:Dataset``.
+   and optional for ``dcat:Distribution``. There should be at least one
+   national language set: German (``de``), French (``fr``) or Italian (``it``).
+   English (``en``) should also be set, since it is the language which is taken by the European
+   Dataportal to represent the dataset.
 
 .. container:: attribute
 
@@ -57,7 +56,6 @@ Title and Description DCAT
 
     :Type: ``rdfs:Literal`` http://www.w3.org/TR/rdf-schema/#ch_literal
     :Parent: ``dcat:Catalog``, ``dcat:Dataset``, ``dcat:Distribution``
-    :Mandatory: yes
     :Cardinality: 1..n (one for each language) for ``dcat:Catalog``, ``dcat:Dataset``
                   0..n for ``dcat:Distribution``
     :Attributes: - Name: ``xml:lang``
@@ -69,6 +67,7 @@ Title and Description DCAT
 
     .. code-block:: xml
        :caption: dct:title
+       :emphasize-lines: 1
 
         <dct:title xml:lang="de">Eisenbahnlärm Nacht</dct:title>
 
@@ -77,8 +76,8 @@ Title and Description DCAT
     **dct:description** 1..n
 
     :Type: ``rdfs:Literal`` http://www.w3.org/TR/rdf-schema/#ch_literal
-    :Mandatory: yes
-    :Cardinality: 1..n (one for each language)
+    :Cardinality: 1..n (one for each language) for ``dcat:Catalog``, ``dcat:Dataset``
+                  0..n for ``dcat:Distribution``
     :Attributes: - Name: ``xml:lang``
                  - Content: ``en``, ``de``, ``fr``, ``it``
                  - Description: Language of the element
@@ -88,6 +87,7 @@ Title and Description DCAT
 
     .. code-block:: xml
        :caption: dct:description
+       :emphasize-lines: 1,2,3,4
 
        <dct:description xml:lang="de">
            Die Karte zeigt, welcher Lärmbelastung die Bevölkerung
@@ -99,24 +99,31 @@ Title and Description DCAT
 Title and Description GM03
 ----------------------------------------------------
 
-.. admonition:: :geo:term:`GM03 dataset title and description`
+.. admonition:: :geo:term:`GM03 dcat:Catalog dct:title and dct:description`
    :class: convention
 
-    The dataset title and description are mapped  as follows
+    The dataset title and description are currently not mapped for the Catalog
+
+.. admonition:: :geo:term:`GM03 dcat:Dataset dct:title and dct:description`
+   :class: convention
+
+    The dataset title and description are mapped as localized Character Strimgs
 
 .. container:: attribute
 
     **dct:title**
 
-    :ISO-19139_che XPath:
-
     .. code-block:: xml
-       :caption: dct:title for dcat:Datasets
+       :caption: ISO-19139_che XPath for dct:title of dcat:Dataset
 
        //gmd:identificationInfo//gmd:citation//gmd:title//gmd:textGroup/gmd:LocalisedCharacterString
 
+.. container:: attribute
+
+    **dct:description**
+
     .. code-block:: xml
-       :caption: dct:description for dcat:Datasets
+       :caption: ISO-19139_che XPath for dct:description of dcat:Dataset
 
        //gmd:transferOptions//gmd:CI_OnlineResource//gmd:description//gmd:LocalisedCharacterString
 
@@ -155,17 +162,6 @@ Title and Description GM03
          </gmd:PT_FreeText>
        </gmd:title>
 
-.. container:: attribute
-
-    **dct:description**
-
-    :Display name on opendata.swiss: Description
-    :ISO-19139_che XPath:
-
-    .. code:: xml
-
-        //gmd:identificationInfo//gmd:abstract//gmd:textGroup/gmd:LocalisedCharacterString
-
     .. code-block:: xml
        :caption: Example of getting dct:description: only 4 languages are taken: DE, EN, FR, IT
        :emphasize-lines: 5, 8, 11, 14
@@ -194,19 +190,8 @@ Title and Description GM03
 .. admonition:: :geo:term:`GM03 distribution title and description`
    :class: convention
 
+   The mapping depends on the distribution protocol:
+   ``//gmd:transferOptions//gmd:CI_OnlineResource//gmd:protocol/gco:CharacterString``
 
-    .. code-block:: xml
-       :caption: dct:title for dcat:Distribution for Protocol WWW:DOWNLOAD-1.0-http--download
-
-       //srv:operationName/gco:CharacterString
-
-    .. code-block:: xml
-       :caption: dct:title for dcat:Distribution for Protocol WWW:DOWNLOAD-1.0-http--download
-
-       //gmd:distributionInfo//gmd:transferOptions/gmd:name
-
-    .. code-block:: xml
-       :caption: dct:title for dcat:Distribution for Protocol WWW:DOWNLOAD-1.0-http--download
-
-       //gmd:transferOptions//gmd:CI_OnlineResource//gmd:protocol/gco:CharacterString
+   see :doc:`geocat-distributions <../classes/geocat-distribution>`
 
