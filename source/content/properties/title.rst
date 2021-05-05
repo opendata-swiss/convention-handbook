@@ -7,62 +7,151 @@
 ******************************
 dct:title
 ******************************
+.. _catalog-title:
 
-.. _accrual-periodicity-dcat-ap:
+dcat:Catalog dct:title
+============================================================
 
 .. admonition:: DCAT-AP
    :class: dcatap
 
-   :property: frequency
-   :URI: dct:accrualPeriodicity
-   :Class: dcat:Dataset
-   :Range: `dct:Frequency <http://dublincore.org/groups/collections/frequency/>`__
-   :Cardinality: 0:1
-   :Usage note: This property refers to the frequency
-                at which the Dataset is updated.
+   :property: title
+   :URI: dct:title
+   :Range: rdfs:Literal
+   :Cardinality: 1:n
+   :compliance: mandatory
+   :Usage note: This property contains a name given to the Catalogue.
+                It can be repeated in multiple languages.
 
-.. _accrual-periodicity-dcat-ap-ch:
+.. admonition:: DCAT-AP-CH
+   :class: dcatapch
+
+   :Usage note: Title is expected in at least one of the languages: de, fr, it, en
+
+.. admonition:: opendata.swiss
+   :class: ogdch
+
+   not implemented
+
+.. admonition:: geocat
+   :class: geocat
+
+   not implemented
+
+.. _dataset-title:
+
+dcat:Dataset dct:title
+============================================================
+
+.. admonition:: DCAT-AP
+   :class: dcatap
+
+   :property: title
+   :URI: dct:title
+   :Range: rdfs:Literal
+   :Cardinality: 1:n
+   :compliance: mandatory
+   :Usage note: This property contains a name given to the Dataset.
+                It can be repeated in multiple languages.
+
+.. admonition:: DCAT-AP-CH
+   :class: dcatapch
+
+   :Usage note: Title is expected in at least one of the languages: de, fr, it, en
+
+.. admonition:: opendata.swiss
+   :class: ogdch
+
+   .. code-block:: xml
+      :caption: dct:title in rdf/xml for dcat:Dataset
+      :emphasize-lines: 1
+
+      <dct:title xml:lang="de">Eisenbahnlärm Nacht</dct:title>
+
+.. admonition:: geocat
+   :class: geocat
+
+   .. code-block:: xml
+      :caption: XPATH for dct:title on dcat:Dataset
+
+      //gmd:identificationInfo//gmd:citation//gmd:title//gmd:textGroup/gmd:LocalisedCharacterString
+
+   .. code-block:: xml
+      :caption: Example of getting dct:title: only 4 languages are taken: DE, EN, FR, IT
+      :emphasize-lines: 6, 11, 16, 21
+
+      <gmd:title xsi:type="gmd:PT_FreeText_PropertyType">
+        <gco:CharacterString>Lärmbelastung durch Eisenbahnverkehr (Lr_Nacht)</gco:CharacterString>
+          <gmd:PT_FreeText>
+            <gmd:textGroup>
+              <gmd:LocalisedCharacterString locale="#FR">
+                Exposition au bruit du trafic ferroviaire (Lr_nuit)
+              </gmd:LocalisedCharacterString>
+            </gmd:textGroup>
+            <gmd:textGroup>
+              <gmd:LocalisedCharacterString locale="#DE">
+                Lärmbelastung durch Eisenbahnverkehr (Lr_Nacht)
+              </gmd:LocalisedCharacterString>
+            </gmd:textGroup>
+            <gmd:textGroup>
+              <gmd:LocalisedCharacterString locale="#EN">
+                Nighttime railway noise exposure
+              </gmd:LocalisedCharacterString>
+            </gmd:textGroup>
+            <gmd:textGroup>
+              <gmd:LocalisedCharacterString locale="#IT">
+                Esposizione al rumore del traffico ferroviario (Lr_notte)
+              </gmd:LocalisedCharacterString>
+            </gmd:textGroup>
+            <gmd:textGroup>
+              <gmd:LocalisedCharacterString locale="#RM">
+                Grevezza da canera tras il traffic da viafier durant la notg
+              </gmd:LocalisedCharacterString>
+            </gmd:textGroup>
+          </gmd:PT_FreeText>
+        </gmd:title>
+
+.. _distribution-title:
+
+dcat:Distribution dct:title
+============================================================
+
+.. admonition:: DCAT-AP
+   :class: dcatap
+
+   :property: title
+   :URI: dct:title
+   :Range: rdfs:Literal
+   :Cardinality: 1:n
+   :compliance: optional
+   :Usage note: This property contains a name given to the Distribution.
+                It can be repeated in multiple languages.
 
 .. admonition:: DCAT-AP-CH
    :class: dcatapch
 
    conforms
 
-.. _accrual-periodicity-opendata-swiss:
-
 .. admonition:: opendata.swiss
    :class: ogdch
 
    .. code-block:: xml
-      :caption: dct:accrualPeriodicity in rdf/xml
+      :caption: dct:title for dcat:Dataset
       :emphasize-lines: 1
 
-      <dct:accrualPeriodicity rdf:resource="http://purl.org/cld/freq/daily"/>
-
-.. _accrual-periodicity-geocat:
+      <dct:title xml:lang="de">Eisenbahnlärm Nacht</dct:title>
 
 .. admonition:: geocat
    :class: geocat
 
-   .. code-block:: xml
-      :caption: XPATH for dct:accrualPeriodicity
-      :emphasize-lines: 1
-
-      //gmd:identificationInfo//che:CHE_MD_MaintenanceInformation/gmd:maintenanceAndUpdateFrequency/gmd:MD_MaintenanceFrequencyCode/@codeListValue
+   depends on the protocol: ``//gmd:transferOptions//gmd:CI_OnlineResource//gmd:protocol/gco:CharacterString``
 
    .. code-block:: xml
-      :caption: mapping of values
-      :emphasize-lines: 1
+      :caption: XPATH for dct:title for geoservices
 
-      frequency_mapping= {
-        'continual': 'http://purl.org/cld/freq/continuous',
-        'daily': 'http://purl.org/cld/freq/daily',
-        'weekly': 'http://purl.org/cld/freq/weekly',
-        'fortnightly': 'http://purl.org/cld/freq/biweekly',
-        'monthly': 'http://purl.org/cld/freq/monthly',
-        'quarterly': 'http://purl.org/cld/freq/quarterly',
-        'biannually': 'http://purl.org/cld/freq/semiannual',
-        'annually': 'http://purl.org/cld/freq/annual',
-        'asNeeded': 'http://purl.org/cld/freq/completelyIrregular',
-        'irregular': 'http://purl.org/cld/freq/completelyIrregular',
-      }
+      .//srv:operationName/gco:CharacterString
+
+   .. code-block:: xml
+      :caption: XPATH for dct:title for other protocols
+
+      .//gmd:distributionInfo//gmd:transferOptions/gmd:name

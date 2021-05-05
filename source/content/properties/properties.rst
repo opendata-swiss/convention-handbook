@@ -4,9 +4,9 @@
    - :Properties
 
 
-*********************
-Auf einen Blick
-*********************
+**************************************
+Properties of the DCAT-AP-CH
+**************************************
 
 Properties
 =================
@@ -22,9 +22,9 @@ Properties
       - dcat:Distribution
       - foaf:Agent
     * - :doc:`dct:title <title>`
-      - mandatory
-      - mandatory
-      - optional
+      - :ref:`mandatory <catalog-title>`
+      - :ref:`mandatory <dataset-title>`
+      - :ref:`optional <distribution-title>`
       - x
     * - :doc:`dct:description <description>`
       - mandatory
@@ -42,7 +42,7 @@ Properties
       - conditional
       - x
     * - :doc:`foaf:homepage <homepage>`
-      - mandatory
+      - :ref:`mandatory <catalog-homepage>`
       - x
       - x
       - x

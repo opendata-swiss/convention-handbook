@@ -8,8 +8,8 @@
 dcat:accrualPeriodicity
 ******************************
 
-:Class: dcat:Dataset
-======================
+dcat:Dataset dcat:accrualPeriodicity
+=========================================
 
 .. _accrual-periodicity-dcat-ap:
 

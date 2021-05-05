@@ -3,9 +3,9 @@
    - :fa:`home` :doc:`Conventionen-Handbook <../../index>` :fa:`chevron-right`
    - Classes
 
-*********************
-Auf einen Blick
-*********************
+**************************************
+Classes of the DCAT-AP-CH
+**************************************
 
 Classes
 =================

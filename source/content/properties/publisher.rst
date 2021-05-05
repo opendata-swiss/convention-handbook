@@ -2,67 +2,107 @@
 
    - :fa:`home` :doc:`Conventionen-Handbook <../../index>` :fa:`chevron-right`
    - :doc:`Properties <properties>` :fa:`chevron-right`
-   - dcat:accrualPeriodicity
+   - dct:publisher
 
 ******************************
-dcat:accrualPeriodicity
+dct:publisher
 ******************************
 
-.. _accrual-periodicity-dcat-ap:
+.. _catalog-publisher:
+
+dcat:Catalog dct:publisher
+============================================================
 
 .. admonition:: DCAT-AP
    :class: dcatap
 
-   :property: frequency
-   :URI: dct:accrualPeriodicity
-   :Class: dcat:Dataset
-   :Range: `dct:Frequency <http://dublincore.org/groups/collections/frequency/>`__
-   :Cardinality: 0:1
-   :Usage note: This property refers to the frequency
-                at which the Dataset is updated.
-
-.. _accrual-periodicity-dcat-ap-ch:
+   :property: publisher
+   :URI: dct:publisher
+   :Range: foaf:Agent
+   :Cardinality: 1:1
+   :compliance: mandatory
+   :Usage note: This property refers to an entity (organisation) responsible for making the Catalogue available.
 
 .. admonition:: DCAT-AP-CH
    :class: dcatapch
 
    conforms
 
-.. _accrual-periodicity-opendata-swiss:
-
 .. admonition:: opendata.swiss
    :class: ogdch
 
-   .. code-block:: xml
-      :caption: dct:accrualPeriodicity in rdf/xml
-      :emphasize-lines: 1
-
-      <dct:accrualPeriodicity rdf:resource="http://purl.org/cld/freq/daily"/>
-
-.. _accrual-periodicity-geocat:
+   not implemented
 
 .. admonition:: geocat
    :class: geocat
 
-   .. code-block:: xml
-      :caption: XPATH for dct:accrualPeriodicity
-      :emphasize-lines: 1
+   not implemented
 
-      //gmd:identificationInfo//che:CHE_MD_MaintenanceInformation/gmd:maintenanceAndUpdateFrequency/gmd:MD_MaintenanceFrequencyCode/@codeListValue
+.. _dataset-publisher:
 
-   .. code-block:: xml
-      :caption: mapping of values
-      :emphasize-lines: 1
+dcat:Dataset dct:publisher
+============================================================
 
-      frequency_mapping= {
-        'continual': 'http://purl.org/cld/freq/continuous',
-        'daily': 'http://purl.org/cld/freq/daily',
-        'weekly': 'http://purl.org/cld/freq/weekly',
-        'fortnightly': 'http://purl.org/cld/freq/biweekly',
-        'monthly': 'http://purl.org/cld/freq/monthly',
-        'quarterly': 'http://purl.org/cld/freq/quarterly',
-        'biannually': 'http://purl.org/cld/freq/semiannual',
-        'annually': 'http://purl.org/cld/freq/annual',
-        'asNeeded': 'http://purl.org/cld/freq/completelyIrregular',
-        'irregular': 'http://purl.org/cld/freq/completelyIrregular',
-      }
+.. admonition:: DCAT-AP
+   :class: dcatap
+
+   :property: publisher
+   :URI: dct:publisher
+   :Range: foaf:Agent
+   :Cardinality: 0:1
+   :compliance: recommended
+   :Usage note: This property refers to an entity (organisation) responsible for making the Dataset available.
+
+.. admonition:: DCAT-AP-CH
+   :class: dcatapch
+
+   :Cardinality: 1:1
+   :compliance: mandatory
+
+.. admonition:: opendata.swiss
+   :class: ogdch
+
+   implementation does not conform
+   - uses ``rdfs:label`` instead of ``foaf:name``
+   - does not use a class ``foaf:Agent``
+
+    .. code-block:: xml
+       :caption: dct:publisher
+       :emphasize-lines: 2,3,4
+
+       <dct:publisher rdf="publisher-uri">
+           <foaf:Description rdf:about="https://www.bafu.admin.ch/">
+               <rdfs:label>Bundesamt für Landestopografie swisstopo</rdfs:label>
+           </rdf:Description>
+       </dct:publisher>
+
+.. admonition:: geocat
+   :class: geocat
+
+    .. code-block:: xml
+        :caption: XPATH for dct:publisher: the first one is taken in the following order:
+
+        //gmd:identificationInfo//gmd:pointOfContact[.//gmd:CI_RoleCode/@codeListValue = "publisher"]//gmd:organisationName/gco:CharacterString
+        //gmd:identificationInfo//gmd:pointOfContact[.//gmd:CI_RoleCode/@codeListValue = "owner"]//gmd:organisationName/gco:CharacterString
+        //gmd:identificationInfo//gmd:pointOfContact[.//gmd:CI_RoleCode/@codeListValue = "pointOfContact"]//gmd:organisationName/gco:CharacterString
+        //gmd:identificationInfo//gmd:pointOfContact[.//gmd:CI_RoleCode/@codeListValue = "distributor"]//gmd:organisationName/gco:CharacterString
+        //gmd:identificationInfo//gmd:pointOfContact[.//gmd:CI_RoleCode/@codeListValue = "custodian"]//gmd:organisationName/gco:CharacterString
+        //gmd:contact//che:CHE_CI_ResponsibleParty//gmd:organisationName/gco:CharacterString
+
+    .. code-block:: xml
+       :caption: Example of getting dct:publisher: codeListValue="pointOfContact" is detected
+       :emphasize-lines: 1,2,3,4,5,8,9
+
+       <gmd:identificationInfo>
+          <gmd:pointOfContact>
+             <gmd:CI_ResponsibleParty>
+                <gmd:organisationName xsi:type="gmd:PT_FreeText_PropertyType">
+                   <gco:CharacterString>Bundesamt für Strassen</gco:CharacterString>
+                </gmd:organisationName>
+                <gmd:role>
+                   <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode"
+                                    codeListValue="pointOfContact"/>
+                </gmd:role>
+             </gmd:CI_ResponsibleParty>
+          </gmd:pointOfContact>
+       </gmd:identificationInfo>

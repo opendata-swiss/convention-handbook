@@ -8,9 +8,8 @@
 foaf:name
 ******************************
 
-.. _name-dcat-ap:
-
-:Class: foaf:Agent
+foaf:Agent foaf:name
+==============================
 
 .. admonition:: DCAT-AP
    :class: dcatap

@@ -23,7 +23,7 @@ dcat:Dataset
       - x
       - x
       - x
-    * - dct:title
+    * - :ref:`dct:title <dataset-title>`
       - mandatory 1..n
       - conforms
       - conforms

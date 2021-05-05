@@ -4,60 +4,20 @@
    - Conventions
 
 *********************
-Auf einen Blick
+Conventions
 *********************
 
-Konventionen
+Conventions
 =================
 
 .. container:: Intro
 
-   Konventionen garantieren einen fliessenden Übergang zwischen den verschiedenen
-   Versionen des DCAT-AP-CH.
+   Conventions have the following goals:
 
-   - Konventionen bereitet die Verwendung neuer Klassen und Attribute vor.
-   - Sie berücksichtigen die Fähigkeiten des nationalen Datenportals :term:`opendaten.swiss`
+   - Conventions prepare the next version of the DCAT-AP-CH
+   - Conventions help to gradually make changes: by offering an old way and
+     a new way to map metadata in parallel, so that datapublisher can chose
+     themselves when to make the switch
 
-Hier sehen Sie zu welchen Themen es im DCAT-AP-CH Konventionen gibt:
-
-Namespaces
-------------
-
-:doc:`Namespaces Überblick <namespaces>`
-
-    - :ref:`Aktuelle Namespaces im DCAT-AP-CH <namespaces-dcat-ap-ch>`
-
-Unterstützte Formate
-----------------------
-
-:doc:`Unterstützte Formate Überblick <katalogformate>`
-
-    - :ref:`Unterstützte DCAT Metadatenformate <katalogformate-dcat>`
-    - :ref:`Unterstützte Formate für Geometadaten <katalogformate-geodaten>`
-
-Katalog und Dataset-Metadaten
-------------------------------
-
-``dct:publisher``
-
-:doc:`Publisher Überblick <publisher>`
-
-    - :ref:`Publisher bei DCAT-Datenkatalogen <publisher-dcat>`
-    - :ref:`Publisher von Geodaten <publisher-geodaten>`
-
-``dct:contactPoint``
-
-:doc:`Kontakstellen Überblick <kontaktstellen>`
-
-    - :ref:`Kontaktstellen bei DCAT-Datenkatalogen <kontaktstellen-dcat>`
-    - :ref:`Kontaktstellen von Geodaten <kontaktstellen-geodaten>`
-
-``dct:title``, ``dct:description``
-
-:doc:`Titel und Beschreibung Überblick <titel-und-beschreibung>`
-
-    - :ref:`Titel und Beschreibung bei DCAT-Datenkatalogen <titel-beschreibung-dcat>`
-    - :ref:`Titel und Beschreibung bei Geodaten Datenkatalogen <titel-beschreibung-geodaten>`
-
-
-
+   Overall the goal is for the DCAT-AP-CH and its implementation on opendata.swiss
+   to be compliant to the DCAT-AP. This will be acchieved one convention at a time.

@@ -23,7 +23,7 @@ dcat:Distributions
       - x
       - x
       - x
-    * - dct:title
+    * - :ref:`dct:title <distribution-title>`
       - optional 0..n
       - conditional 0..n
       -

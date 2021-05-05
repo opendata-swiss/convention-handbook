@@ -23,7 +23,7 @@ dcat:Catalog
       - x
       - x
       - x
-    * - :doc:`dct:title <../properties/title>`
+    * - :ref:`dct:title <catalog-title>`
       - mandatory 1..n
       - conforms
       - x

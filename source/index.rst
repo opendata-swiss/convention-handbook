@@ -12,65 +12,32 @@ Convention Handbook
 ***************************************
 
 This Convention Handbook is meant to support the further development of the
-Swiss DCAT Application Profile for Dataportals: DCAT-AP-CH.
-
-
-Purpose of the Convention Handbook
-----------------------------------------------
-Datastandard as the DCAT-AP-CH change at a slow pace and have to go through many reviews
-before they finally get accepted.
-The practical needs of the Datapublishers and Datauser
-shift on a faster pace and are often
-triggered by outside circumstances such as new software, changes is in the DCAT-AP,
-changing needs in the society.
-Conventions help to bridge this gap. They prepare
-the next version of the DCAT-AP-CH, by implementing new rules as conventions first before they
-become part of the next version of the Standard.
+Swiss DCAT Application Profile for Dataportals: :term:`DCAT-AP-CH`.
 
 Goals of the Convention Handbook
+----------------------------------------------
+
+- Documentation of the current DCAT-AP-CH and its implementation on opendata.swiss
+- Put up conventions that prepare the path to a next version of the DCAT-AP-CH that
+  is compatiblee with the :term:`DCAT-AP`
+
+Documentation
 ------------------------------------------------
 
-Explain the DCAT-AP-CH
-^^^^^^^^^^^^^^^^^^^^^^^^
-Explain the current DCAT-AP-CH and give examples on how to apply it.
+Enter the documentation by exploring :doc:`Classes <content/classes/classes>` of the DCAT-AP-CH
+or proceed directly to the :doc:`Properties <content/properties/properties>`
 
-Improve the compatablity to the DCAT-AP
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Dort wo der DCAT-AP-CH zur Zeit nicht kompatibel mit dem DCAT-AP ist
-werden Lösungen erarbeitet und als Konventioen etabliert. Erweisen sie
-sich dann in der Praxis als tragfähig können die Konventione zu einem
-späteren Zeitpunkt in die nächste Version des DCAT-AP-CH einfliessen
-
-Add new features from the DCAT-AP
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Some features form the DCAT-AP can be added as conventions before being added to the Swiss application profile
-DCAT-AP-CH
-
-Dokumentation der Implemtation auf opendata.swiss
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Das Konventionen-Handbuch dokumentiert auch die Implemantion des DCAT-AP-CH auf opendata.swiss und den
-Import von DCAT-Datenkatalog und Geodatenkatalogen.
-
-Womit möchten Sie beginnen?
---------------------------------
-
-Einstiege in das Konventionen-Handbuch sind die folgenden:
-
-- :doc:`Konventionen für DCAT Datenkatalog <content/glossar/konventionen-dcat>`
-- :doc:`Konventionen für Geodaten Datenkatalog <content/glossar/konventionen-geo>`
-- :doc:`Übersicht über die Konventionen nach Thema <content/konventionen/konventionen>`
-- :doc:`Neue Konventionen in Vorbereitung <content/glossar/konventionen-neu>`
+Conventions
+---------------
 
 .. toctree::
    :maxdepth: 2
    :caption: Basiswissen
 
-   content/konventionen/dataformats
-   content/konventionen/namespaces
-   content/konventionen/dcatapch
+   content/conventions/dataformats
+   content/conventions/namespaces
+   content/conventions/languages
+   content/conventions/publisher
 
 .. toctree::
    :maxdepth: 2
@@ -87,15 +54,10 @@ Einstiege in das Konventionen-Handbuch sind die folgenden:
    :caption: Properties
 
    content/properties/properties
+   content/properties/title
+   content/properties/publisher
    content/properties/coverage
    content/properties/accrual-periodicity
-   content/properties/title
-   content/properties/description
-   content/properties/issued
-   content/properties/modified
-   content/properties/language
-   content/properties/license
-   content/properties/rights
    content/properties/homepage
    content/properties/name
 

@@ -33,12 +33,12 @@ dcat:Catalog dct:language
 .. admonition:: opendata.swiss
    :class: ogdch
 
-   catalog is not used
+   not implemented
 
 .. admonition:: geocat
    :class: geocat
 
-   mapping is not implemented
+   not implemented
 
 .. _dataset-language:
 

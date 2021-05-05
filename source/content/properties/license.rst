@@ -8,7 +8,10 @@
 dct:license
 ******************************
 
-.. _license-dcat-ap:
+.. _catalog-license:
+
+dcat:Catalog dct:licence
+============================================================
 
 .. admonition:: DCAT-AP
    :class: dcatap
@@ -22,8 +25,6 @@ dct:license
    :Cardinality: 0:1
    :Usage note: This  property  refers  to  the  licence  under which the Catalogue can be used or reused.
 
-.. _license-dcat-ap-ch:
-
 .. admonition:: DCAT-AP-CH
    :class: dcatapch
 
@@ -32,16 +33,22 @@ dct:license
            dcat:Distribution
    :Usage note: license document under which the catalog (and not the datasets) is made available
 
-.. _license-opendata-swiss:
-
 .. admonition:: opendata.swiss
    :class: ogdch
 
    not used
 
-.. _license-geocat:
-
 .. admonition:: geocat
    :class: geocat
 
    not used
+
+.. _dataset-license:
+
+dcat:Catalog dct:licence
+============================================================
+
+.. _distribtution-license:
+
+dcat:Catalog dct:licence
+============================================================
