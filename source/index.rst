@@ -34,6 +34,20 @@ or proceed directly to the :doc:`Properties <content/properties/properties>`
 
 .. toctree::
    :maxdepth: 2
+   :caption: Properties
+
+   content/properties/properties
+   content/properties/title
+   content/properties/publisher
+   content/properties/language
+   content/properties/license
+   content/properties/coverage
+   content/properties/accrual-periodicity
+   content/properties/homepage
+   content/properties/name
+
+.. toctree::
+   :maxdepth: 2
    :caption: Basiswissen
 
    content/konventionen/dcatapch
