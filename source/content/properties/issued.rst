@@ -1,12 +1,14 @@
 .. container:: custom-breadcrumbs
 
    - :fa:`home` :doc:`Conventionen-Handbook <../../index>` :fa:`chevron-right`
-   - :doc:`Conventions <../conventions>` :fa:`chevron-right`
-   - Accrual Periodicity
+   - :doc:`Properties <properties>` :fa:`chevron-right`
+   - dcat:accrualPeriodicity
 
 ******************************
-Accrual Periodicity
+dcat:accrualPeriodicity
 ******************************
+
+.. _accrual-periodicity-dcat-ap:
 
 .. admonition:: DCAT-AP
    :class: dcatap
@@ -19,39 +21,40 @@ Accrual Periodicity
    :Usage note: This property refers to the frequency
                 at which the Dataset is updated.
 
+.. _accrual-periodicity-dcat-ap-ch:
+
 .. admonition:: DCAT-AP-CH
    :class: dcatapch
 
-   :DCAT-AP: conformant
+   conforms
+
+.. _accrual-periodicity-opendata-swiss:
 
 .. admonition:: opendata.swiss
-   :class: convention
+   :class: ogdch
 
-   Implementation in rdf/xml
+   .. code-block:: xml
+      :caption: dct:accrualPeriodicity in rdf/xml
+      :emphasize-lines: 1
 
-.. code-block:: xml
-  :caption: dct:accrualPeriodicity in rdf/xml
-  :emphasize-lines: 1
+      <dct:accrualPeriodicity rdf:resource="http://purl.org/cld/freq/daily"/>
 
-  <dct:accrualPeriodicity rdf:resource="http://purl.org/cld/freq/daily"/>
+.. _accrual-periodicity-geocat:
 
 .. admonition:: geocat
    :class: geocat
 
-    Mapping from geocat via XPATH and cleaning
+   .. code-block:: xml
+      :caption: XPATH for dct:accrualPeriodicity
+      :emphasize-lines: 1
 
+      //gmd:identificationInfo//che:CHE_MD_MaintenanceInformation/gmd:maintenanceAndUpdateFrequency/gmd:MD_MaintenanceFrequencyCode/@codeListValue
 
-.. code-block:: xml
-  :caption: XPATH for dct:accrualPeriodicity
-  :emphasize-lines: 1
+   .. code-block:: xml
+      :caption: mapping of values
+      :emphasize-lines: 1
 
-  //gmd:identificationInfo//che:CHE_MD_MaintenanceInformation/gmd:maintenanceAndUpdateFrequency/gmd:MD_MaintenanceFrequencyCode/@codeListValue
-
-.. code-block:: xml
-  :caption: mapping of values
-  :emphasize-lines: 1
-
-  frequency_mapping= {
+      frequency_mapping= {
         'continual': 'http://purl.org/cld/freq/continuous',
         'daily': 'http://purl.org/cld/freq/daily',
         'weekly': 'http://purl.org/cld/freq/weekly',
@@ -62,4 +65,4 @@ Accrual Periodicity
         'annually': 'http://purl.org/cld/freq/annual',
         'asNeeded': 'http://purl.org/cld/freq/completelyIrregular',
         'irregular': 'http://purl.org/cld/freq/completelyIrregular',
-    }
+      }

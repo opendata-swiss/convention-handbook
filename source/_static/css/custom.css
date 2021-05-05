@@ -377,40 +377,19 @@ div.container.instructions p {
     background: darkblue;
 }
 
-.rst-content .convention.admonition
-{
-    background:whitesmoke;
-}
-
 .rst-content .dcatapch .admonition-title
 {
     background: red;
 }
 
-
-.rst-content .convention .admonition-title
+.rst-content .ogdch .admonition-title
 {
     background:#098;
 }
 
-.rst-content .geocat .admonition-title
+.rst-content .ogdch.admonition, .rst-content .geocat.admonition
 {
-    background:lightblue;
-}
-
-.rst-content .general .admonition-title
-{
-    background: grey;
-}
-
-.rst-content .konvention-draft a
-{
-    color: white;
-}
-
-.rst-content .konvention .admonition-title a
-{
-    color: white;
+    background:whitesmoke;
 }
 
 #term-general, #term-geo, #term-dcat, #term-neu {

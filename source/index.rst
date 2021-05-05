@@ -76,33 +76,28 @@ Einstiege in das Konventionen-Handbuch sind die folgenden:
    :maxdepth: 2
    :caption: Classes
 
-   content/conventions/classes/agent
-   content/conventions/classes/catalog
-   content/conventions/classes/dataset
-   content/conventions/classes/distribution
-   content/conventions/classes/geocat-distribution
+   content/classes/classes
+   content/classes/agent
+   content/classes/catalog
+   content/classes/dataset
+   content/classes/distribution
 
 .. toctree::
    :maxdepth: 2
    :caption: Properties
 
-   content/conventions/conventions
-   content/conventions/properties/publisher
-   content/conventions/properties/contact-points
-   content/conventions/properties/title-and-description
-   content/conventions/properties/keywords
-   content/conventions/properties/language
-   content/conventions/properties/coverage
-   content/conventions/properties/landing-page
-   content/conventions/properties/relation
-   content/conventions/properties/see_alsos
-   content/conventions/properties/temporal
-   content/conventions/properties/issued
-   content/conventions/properties/modified
-   content/conventions/properties/theme
-   content/conventions/properties/rights-license
-   content/conventions/properties/accrual-periodicity
-
+   content/properties/properties
+   content/properties/coverage
+   content/properties/accrual-periodicity
+   content/properties/title
+   content/properties/description
+   content/properties/issued
+   content/properties/modified
+   content/properties/language
+   content/properties/license
+   content/properties/rights
+   content/properties/homepage
+   content/properties/name
 
 .. toctree::
    :maxdepth: 2

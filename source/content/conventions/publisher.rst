@@ -8,6 +8,8 @@
 Publisher
 ******************************
 
+.. _publisher-dcat-ap:
+
 .. admonition:: dct:publisher and dct:contact point in DCAT-AP
    :class: dcatap
 
@@ -22,6 +24,8 @@ Publisher
 
    More on the difference between publisher and contact point
    see here: `How are publisher and contact point modelled?  <https://joinup.ec.europa.eu/release/how-are-publisher-and-contact-point-modelled>`__
+
+.. _publisher-dcat-ap-ch:
 
 .. admonition:: dct:publisher and dct:contact point in DCAT-AP-CH
    :class: dcatapch
