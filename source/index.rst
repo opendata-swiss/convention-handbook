@@ -22,6 +22,17 @@ Documentation
 Enter the documentation by exploring :doc:`Classes <content/classes/classes>` of the DCAT-AP-CH
 or proceed directly to the :doc:`Properties <content/properties/properties>`
 
+Usage
+-----------------------
+
+This convention handbook is all you need to build up your datacatalog correctly so that it follows
+the latest recommendations regarding the DCAT-AP-CH:
+
+For any class or field:
+- check whether there is a new valid canvention :doc:`Conventions <content/conventions/conventions>`
+- if not follow the regular documentation :doc:`Classes <content/classes/classes>`
+and :doc:`Properties <content/properties/properties>`
+
 .. toctree::
    :maxdepth: 2
    :caption: Conventions
@@ -61,6 +72,7 @@ or proceed directly to the :doc:`Properties <content/properties/properties>`
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
    :caption: Konventionen
 
    content/konventionen/konventionen
@@ -71,6 +83,7 @@ or proceed directly to the :doc:`Properties <content/properties/properties>`
    content/konventionen/titel-und-beschreibung
 
 .. toctree::
+   :hidden:
    :maxdepth: 1
    :caption: Glossar
 
@@ -81,6 +94,7 @@ or proceed directly to the :doc:`Properties <content/properties/properties>`
    content/glossar/konventionen-neu
 
 .. toctree::
+   :hidden:
    :maxdepth: 1
    :caption: Über das Handbuch
 

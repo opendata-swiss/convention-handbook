@@ -25,5 +25,22 @@ Conventions
 - :doc:`convention#2 for replacing dct:coverage <coverage>`
 
 
+.. list-table:: Properties implemented by DCAT-AP-CH
+    :widths: 10 5 10 50 10
+    :header-rows: 1
+    :stub-columns: 1
+
+    * - Properties
+      - dcat:Catalog
+      - dcat:Dataset
+      - dcat:Distribution
+      - foaf:Agent
+    * - :doc:`dct:publisher <publisher>`
+      - :doc:`convention#1 <publisher>`
+      - :doc:`convention#1 <publisher>`
+      - x
+      - x
+
+
 
 
