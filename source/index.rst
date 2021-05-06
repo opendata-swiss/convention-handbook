@@ -24,6 +24,13 @@ or proceed directly to the :doc:`Properties <content/properties/properties>`
 
 .. toctree::
    :maxdepth: 2
+   :caption: Conventions
+
+   content/conventions/conventions
+   content/conventions/publisher
+
+.. toctree::
+   :maxdepth: 2
    :caption: Classes
 
    content/classes/classes
