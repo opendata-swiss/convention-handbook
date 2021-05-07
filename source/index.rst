@@ -39,6 +39,7 @@ and :doc:`Properties <content/properties/properties>`
 
    content/conventions/conventions
    content/conventions/publisher
+   content/conventions/coverage
 
 .. toctree::
    :maxdepth: 2
