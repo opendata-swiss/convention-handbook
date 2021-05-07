@@ -184,7 +184,7 @@ a, a:hover, a:visited, a:active, a:focus {
 }
 
 /*=======================================*/
-/* Container intro                       */
+/* Container dcatap                    */
 /*=======================================*/
 
 div.container.intro {
@@ -202,24 +202,24 @@ div.container.intro ul {
     margin-bottom: 0
 }
 
+
 /*=======================================*/
-/* Container teaser                      */
+/* Container dcatapch                   */
 /*=======================================*/
 
-div.container.teaser {
-    background-size: 120px;
-    background-repeat: no-repeat;
-    height: 30px;
-    background-image: url("../../_static/images/branding/arrow-on-theme.png");
-    margin-bottom:10px;
-    margin-top:40px;
+div.container.intro {
+    padding: 10px;
+    margin-bottom: 50px;
 }
 
-div.container.teaser p {
-    padding-top: 0;
-    padding-left: 125px;
-    font-weight: 600;
+div.container.intro p {
     font-size: 18px;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+div.container.intro ul {
+    margin-bottom: 0
 }
 
 /*=======================================*/
@@ -323,14 +323,6 @@ div.container.content-divider p {
 }
 
 /*=======================================*/
-/* Container jumpbox                     */
-/*=======================================*/
-
-.ogdch-jumpbox {
-    padding-bottom:40px;
-}
-
-/*=======================================*/
 /* field lists                           */
 /*=======================================*/
 
@@ -380,34 +372,24 @@ div.container.instructions p {
 /* admonition box                        */
 /*=======================================*/
 
-.rst-content .admonition
+.rst-content .dcatap .admonition-title
 {
-    background: white;
+    background: darkblue;
 }
 
-.rst-content .konvention .admonition-title
+.rst-content .dcatapch .admonition-title
 {
-    background: #099;
+    background: red;
 }
 
-.rst-content .konvention-draft .admonition-title
+.rst-content .ogdch .admonition-title
 {
-    background:red;
+    background:#098;
 }
 
-.rst-content .general .admonition-title
+.rst-content .ogdch.admonition, .rst-content .geocat.admonition
 {
-    background: grey;
-}
-
-.rst-content .konvention-draft a
-{
-    color: white;
-}
-
-.rst-content .konvention .admonition-title a
-{
-    color: white;
+    background:whitesmoke;
 }
 
 #term-general, #term-geo, #term-dcat, #term-neu {
